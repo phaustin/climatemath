@@ -16,10 +16,6 @@ toc-showcode: true
 
 +++ {"user_expressions": []}
 
-
-
-+++ {"user_expressions": []}
-
 # The greenhouse effect
 
 ## Definition
@@ -53,7 +49,7 @@ width: 35%
 
 +++ {"user_expressions": []}
 
-## Definitions: [flux and radiance](https://en.wikipedia.org/wiki/Radiometry)
+## Definitions: [flux](https://en.wikipedia.org/wiki/Radiometry)
 
 * Flux density (or irradiance)
 
@@ -64,18 +60,56 @@ width: 35%
   Symbol: E
   
   (for physicists -- this is $S$, the [Poynting vector](https://en.wikipedia.org/wiki/Poynting_vector) )
+  
+  Not conserved in a vacuum -- flux decreases as $1/\text{distance}^2$
+  
+* Some assumptions for undergraduates
+
+  - Shortwave flux: all photons with wavelengths $\lt$ 3 $\mu m$ are emitted by the sun
+  - Longwave flux: all photons with wavelengths $\gt$ 3 $\mu m$ are emitted by terestrial solids, fluids or gasses
+  - Shortwave flux from the sun (the *direct beam*) is directional/collimated, scattering dominates
+  - Longwave flux is isotropic, scattering is negligible
+
+```{figure} figures/cartoon_budget.png
+---
+name: cartoon_budget
+width: 25%
+---
+
+```
+
++++ {"user_expressions": []}
+
+## Definitions: [radiance](https://en.wikipedia.org/wiki/Radiometry)
+
+* Radiance
+
+  Units: $W\,m^{-2}\,sr^{-1}$
+  
+  Definition: electromagnetic energy passing though unit area in unit time in unit field of view
+  
+  Symbol: L
+  
+  Conserved in a vacuum
+  
+  Dilemma: climate scientist want to know the flux, but can only measure the radiance
+
++++ {"user_expressions": []}
+
+## Integrating the radiance to get flux
+
+```{figure} figures/solid_angle.png
+---
+name: test label
+width: 25%
+---
+```
+
 
 +++ {"user_expressions": []}
 
 ## Radiance and flux
 
-```{figure} figures/cartoon_budget.png
----
-name: test label
-width: 50%
----
-a caption
-```
 
 ## Measuring the greenhouse
 
