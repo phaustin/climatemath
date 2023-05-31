@@ -264,7 +264,7 @@ Integrating equation {eq}`diffbeer` yields the **transmissivity** for the layer:
 
 $$
 t_r = L/L_0 = \exp(-\tau)
-$$
+$$ (eq:trans)
 
 The optical depth is the fundamental scaling property for a radiating atmosphere.
 
@@ -284,11 +284,11 @@ $$ (eq:diff_energy)
 
 +++ {"user_expressions": []}
 
-### Relating the volume absorption coefficient $\sigma$ to the mean free path
+### Sample problem: Relating the volume absorption coefficient $\sigma$ to the mean free path
 
 How far can a photon travel before it's absorbed?
 
-The probability that an absorption will occur in distance $d s$ is just the fraction of photons that make it through $ds$ without
+The probability that an absorption event will occur in distance $d s$ is just the fraction of photons that make it through $ds$ without
 being absorbed:
 
 $$
@@ -399,7 +399,7 @@ incoming shortwave flux $S$ and upwelling flux from below $G$
 
 +++ {"user_expressions": []}
 
-### Check: average emissivity at current solar constant S
+### Sanity Check: average emissivity at current solar constant S
 
 For current solar output  and a planetary reflectivity of 30%, $S=240\ W\,m^{-2}$.  With this solar constant {eq}`eq:Tg` gives a surface temperature of 287 K (the current global average) with an emissivity of $\epsilon = 0.75$
 
@@ -428,7 +428,6 @@ $$ (eq:skin)
 
 Putting $S=240\ W\,m^{-2}$ into {eq}`eq:skin` yields $T_{skin}$ = 214 K, **independent of the greenhouse gas concentration**.  This is a good approximation to [observed atmospheric temperatures](http://climatemodels.uchicago.edu/modtran/) at the tropopause.
 
-
 ```{code-cell} ipython3
 Tskin = (S/(2*sigma))**0.25
 print(f"{Tskin=:.0f} K")
@@ -436,14 +435,11 @@ print(f"{Tskin=:.0f} K")
 
 +++ {"user_expressions": []}
 
-
-
-+++ {"user_expressions": []}
-
 ## Calculating the wavelength-dependent emissivity of a greenhouse gas
 
 In {ref}`Section 4 <sec:single_layer>` we found a wavelength-averaged $\epsilon$ consistent with current $S$ and surface temperature. 
-To move further, we need to link $\epsilon_\lambda$ to the volume absorption coefficient $\sigma_\lambda$. To do this
+To move further, we need to link $\epsilon_\lambda$ to the volume absorption coefficient $\sigma_\lambda$
+for the greenhouse gas. To do this
 first decompose $\sigma_\lambda$ into two components:  The **absorber gas density** $\rho_{gas}\ (kg\,m^{-3})$, and the **mass absorption coefficient** $k_\lambda\ (m^{2}\,kg^{-1})$
 
 $$
@@ -455,7 +451,6 @@ How do we calculate $k_\lambda$?  There are [absorption coefficient databases](h
 These absorption lines are then parameterized for use in 
 variety of [radiative transfer models](https://en.wikipedia.org/wiki/Atmospheric_radiative_transfer_codes) like
 [Modtran](http://climatemodels.uchicago.edu/modtran/)
-
 
 +++ {"user_expressions": []}
 
@@ -478,7 +473,7 @@ Three $CO_2$ absorption lines: 7 $\mu m$, 15 $\mu m$, and 4.3 $\mu m$
 
 +++ {"user_expressions": []}
 
-Note that in $CO_2$ band between 550-700 $cm^{-1}$ (14-18 $\mu m$) $k_\lambda$ varies by about 5 orders of magntude.
+Note that in the $CO_2$ band between 550-700 $cm^{-1}$ (14-18 $\mu m$) $k_\lambda$ **varies by about 5 orders of magntude**.
 
 ```{figure} figures/methane_co2.png
 ---
@@ -513,7 +508,7 @@ $$
 dL = -L\,d\tau + B\,d\tau
 $$
 
-Define $\tau$ to be zero at the top of the atmoshere increasing to $\tau_T$ at the surface.
+Choose a coordinate system where $\tau$ is zero at the top of the atmosphere increasing to downwards:
 
 $$
 \tau = \int_z^\infty \rho_{gas} k_\lambda dz
@@ -522,14 +517,16 @@ $$
 Use an integrating factor:
 
 $$
-\exp(\tau) dL_\lambda +
-L_\lambda \exp(\tau)\,d\tau=\exp(\tau)B_\lambda(T) \,d\tau
+\exp(\tau) dL +
+L \exp(\tau)\,d\tau=\exp(\tau)B_\lambda(T) \,d\tau
 $$ (integ1)
 
-Impose boundary conditions and integrate to get the upward radiance at the top of the atmopshere, where $\tau = 0$:
++++ {"user_expressions": []}
+
+Impose boundary conditions and integrate from the top of the atmoshere down to optical depth $\tau_{\lambda T}$ to get the upward radiance at the top of the atmosphere, where $\tau = 0$:
 
  $$
-    L_\lambda(0)= B_\lambda(T_{sfc}) \exp(-\tau_{\lambda T}) +    \int_0^{\tau} \exp\left(-\tau^\prime \right )
+    L(0)= B_\lambda(T_{sfc}) \exp(-\tau_{\lambda T}) +    \int_0^{\tau_{\lambda T}} \exp\left(-\tau^\prime \right )
     B_\lambda(T)\, d\tau^\prime
 $$ (calc2)
 
@@ -537,16 +534,66 @@ $$ (calc2)
 Since the transmission is defined as $t_r = \exp(-\tau)$, we can change variables and write:
 
 $$
+ L(0) =  B_\lambda(T_{sfc})t_{rtot} +    \int_{t_{rtot}}^{1} B_\lambda(T)\, dt_r^\prime 
+$$ (eq:schwarz_tr)
+
++++ {"user_expressions": []}
+
+### Sample problem
+
+Use the mean value theorem to show that there is an average temperature $\hat{T}$ that allows us to write {eq}`eq:schwarz_tr` in the form:
+
+$$
+L(0) = B_\lambda(T_{sfc})t_{rtot} + (1 - t_{rtot})B_\lambda(\hat{T})
+$$
+and that this corresponds to the situation depicted in {ref}`fig:single_layer`.
+
++++ {"user_expressions": []}
+
+## Weighting functions
+
++++ {"user_expressions": []}
+
+We can get some more insight into how absorption and transmission work by rewriting {eq}`eq:schwarz_tr` as folows:
+
+$$
 \begin{align}
- L_\lambda(0) &=  B_\lambda(T_{sfc}) \exp(-\tau_{\lambda T}) +    \int_0^{\tau} \exp\left(-\tau^\prime \right )
-    B_\lambda(T)\, d\tau^\prime \\
-   &=  B_\lambda(T_{sfc}) \exp(-\tau_{\lambda T}) +    \int_z^{\infty} \exp\left(-\tau^\prime \right )
-    B_\lambda(T)\, \frac{d\tau^\prime}{dz} dz
+ L(0) &=  B_\lambda(T_{sfc})t_{rtot} +    \int_{t_{rtot}}^{1} B_\lambda(T)\, dt_r^\prime \\
+   &=  B_\lambda(T_{sfc}) t_{rtot} +    \int_0^{z_{top}}
+    B_\lambda(T)\, \frac{dt_r}{dz^\prime} dz^\prime
 \end{align}
 $$
 
-The differential $dt_r = \frac{dt_r}{dz} dz$ is called the **weighting function** and determines the relative contribution
+The derivative $dt_r/dz$ is called the **weighting function** and determines the relative contribution
 of the thermal emission of each layer to the upwelling radiance leaving the atmosphere.
+
++++ {"user_expressions": []}
+
+For a "well-mixed" absorber like $CO_2$, in which
+the absorber mass fraction is constant with height, the
+absorber has density has an exponential profile:
+
+$$
+\rho_{gas}(z) = \rho_0 \exp(-z/H)
+$$
+where $H$ is the *scale height* for the absorber.
+
+Integrating the optical depth for that case gives:
+
+$$
+\tau(z) = \int_z^\infty \rho_{gas} k_\lambda dz^\prime = H k_\lambda \rho_0 \exp(-z/H)
+$$ (eq:tauz)
+
+### Sample problem
+
+Insert {eq}`eq:tauz` into {eq}`eq:trans` and differentiate twice to show that the maximum values
+of the weighting function $dt_r/dz$ occurs at $\tau = 1$
+
+### Figure examples
+
+
+{ref}`fig:tau_max` below shows a weighting function $dt_r/dz$ (short-dashed line)for this case. 
+
 
 +++ {"user_expressions": []}
 
@@ -556,35 +603,9 @@ name: fig:tau_max
 width: 45%
 ---
 
-Vertical tranmissivity as a function of height.
+Vertical transmissivity ($I_\lambda$ in this book's notation) as a function of height.
 ```
 
 +++ {"user_expressions": []}
 
-```## Measuring the greenhouse
-
-
-## Longwave vs. shortwave
-
-
-## Band saturation
-
-
-##  Absorption bands
-
-
-## absorption, transmission reflection
-
-
-## Beer's law
-
-
-## The schwartzchild equation
-
-
-
-## The heating rate
-
-+++ {"user_expressions": []}
-
-# The greenhouse effec
+## The Schwarzchild equation for flux
