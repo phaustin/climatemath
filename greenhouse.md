@@ -10,9 +10,6 @@ kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
-toc-autonumbering: true
-toc-showcode: false
-toc-showmarkdowntxt: false
 ---
 
 +++ {"user_expressions": []}
@@ -35,34 +32,65 @@ GH = -239 $W\,m^{-2}$ - (-398) $W\,m^{-2}$  = 159 $W\,m^{-2}$
 ```{figure} figures/cartoon_budget.png
 ---
 name: cartoon_budget
-width: 35%
+width: 75%
 ---
 
 Estimated energy fluxes, current climate
 
 ```
 
+(sec:points)=
 ### Important points:
 
 * The atmosphere absorbs and emits longwave radiation.
 
+* Increasing greenhouse gas concentration increases the emissivity of the atmosphere
+  (note the contradiction with [Homework 1](https://www.dropbox.com/s/1ym7dnxtehvy5fq/ANS_05_19_Draft_SCIE001_EBM_HW.pdf?dl=0) ).  There is
+  an important distinction between **emission** (net emitted flux in $W\,m^{-2}$) and **emissivity**
+  (unitless, the relative ability of a gas molecule to emit a photon compared to a blackbody)
+
 * **To first order, absorption is independent of temperature, while emission is a strong function of temperature**
 
-* Because the atmosphere is colder than the surface, it absorbs radiation from the surface and emits less radiation to space.
+* Because the atmosphere is colder than the surface, it absorbs radiation from the surface and emits less radiation to space.  Increasing emissivity decreases emission because it moves the emission layer to higher altitudes/colder temperatures.
 
 * This reduction in surface radiative cooling by the atmosphere is the atmospheric greenhouse effect.
 
+* Any successful theory of the the anthropogenic greenhouse has to explain both tropospheric warming and stratospheric cooling
+
+
+```{figure} figures/stratospheric_cooling.png
+---
+name: fig:strat_cooling
+width: 65%
+---
+Decacal temperature trends (K/decade) between 2002-2022
+```
+
 +++ {"user_expressions": []}
 
-## Talk Outline
+## Outline
 
-1. Start with a heuristic one layer model demonstrating the greenhouse effect
+3\. Basic concepts
+   - Flux and radiance, Planck's law, Beer's law and Kirchoff's law, optical depth 
 
-1. Get some simple qualitative results
+4\. The single layer greenhouse
+   - Simple model of an absorbing and emitting atmosphere over a black surface    
 
-1. Show how the heuristic model encapsulates a more detailed treatment using the Schwarzchild equation
+5\. Wavelength dependent emissivity
+   - Absorption spectra for greenhouse gasses
 
-1. Use the Schwarzchild equation to calculate an equilibrium thermodynamic profile for a idealized atmosphere
+6\. The Schwarzchild equation for radiance
+   - Governing ode for absorption and emission
+   
+7\. Weighting functions, emission level and the greenhouse effect
+   - The link between $CO_2$ concentration, photon emission level and the greenhouse effect
+
+8\. The Schwarzchild equation for flux
+   - Integrating the radiance to calculate the upward flux
+    
+9\. Tropospheric warming and stratospheric cooling
+   - Calculating the impact of the temperature profile on the greenhouse effect
+   - Introduce a notebook to solve the Schwartzchild equation for realistic atmospheres
 
 +++ {"user_expressions": []}
 
@@ -94,7 +122,7 @@ $$ (eq:stefan)
 ```{figure} figures/wh_planck_plus_trans.png
 ---
 name: wh_trans
-width: 45%
+width: 65%
 ---
 
 Selective absorption by greenhouse gases.  Note the 15 $\mu m$ $CO_2$ band coincides with the Planck peak emission at 255 K.
@@ -313,6 +341,8 @@ So the volume absorption coefficient is the inverse of the average distance a ph
 
 ### Kirchoff's law:  $a_\lambda = \epsilon_\lambda$
 
+"Good absorbers are good emitters"
+
 As the transmissivty plots in {ref}`wh_trans` indicate, greenhouse gasses are extremely selective absorbers.
 An important result from statistical mechanics:  any gas in local thermodynamic equilibrium at temperature T that is absorbing radiation at wavelength $\lambda$ will be emitting radiance 
 
@@ -350,10 +380,22 @@ $$ (eq:diff_tau)
 
 +++ {"user_expressions": []}
 
+### Summary
+
+* The optical depth $\tau$ scales the change in absorption and emission in the atmosphere
+
+* $\tau$ is a very strong function of wavelength, due to the wavelength dependence of the volume absorption coefficient
+
+* $d\tau$ is closely related to the mean free path, transmissivity, absorptivity of thin atmospheric layers
+
+* Given an optical depth profile, Beer's law predicts the path dependent absorption of incident radiation
+
++++ {"user_expressions": []}
+
 (sec:single_layer)=
 ## A single-layer model of the greenhouse effect
 
-{ref}`fig:single_layer` below shows how $\epsilon$ is related to the upward and downward fluxes in an atmosphere overlying a black absorbing surface.
+{ref}`fig:single_layer` below shows how $\epsilon$ is related to the upward and downward fluxes in an atmosphere overlying a black absorbing surface.  Note that due to Kirchoff's law, $\epsilon$ is representing both the emissivity and the absorptivity/transmissivity of the layer.
 
 ```{figure} figures/single_layer.png
 ---
@@ -371,7 +413,9 @@ In equilibrium, the net flux has to be zero at both top and bottom boundaries.
 
 Solving for the unknown fluxes $A$ and $G$ gives:
 
-$$A = \frac{\varepsilon S}{\left( 2 - \varepsilon \right)} = \varepsilon \sigma T_{A}^{4}$$
+$$
+A = \frac{\varepsilon S}{\left( 2 - \varepsilon \right)} = \varepsilon \sigma T_{A}^{4}
+$$ (eq:thinlim)
 
 $$G = \frac{2S}{\left( 2 - \varepsilon \right)} = \sigma T_{G}^{4}$$
 
@@ -420,7 +464,7 @@ print(f"{Tg=:.0f} K, {Ta=:.0f} K")
 
 If we change the interpretation of the flux G in {ref}`fig:single_layer` to be the total upward flux from the surface
 and lower atmosphere, then we can find the
-"skin temperature" at the top of the atmosphere by taking the thin layer limit $\epsilon \rightarrow 0$ in {eq}`eq:Ta` and get
+"skin temperature" at the top of the atmosphere by taking the thin layer limit $\epsilon \rightarrow 0$ in {eq}`eq:thinlim` and get
 
 $$
 T_{skin} = \sqrt[4]{\frac{S}{2 \sigma}}
@@ -432,6 +476,18 @@ Putting $S=240\ W\,m^{-2}$ into {eq}`eq:skin` yields $T_{skin}$ = 214 K, **indep
 Tskin = (S/(2*sigma))**0.25
 print(f"{Tskin=:.0f} K")
 ```
+
++++ {"user_expressions": []}
+
+### Summary
+
+* A single layer model of an equilibrium atmosphere is consistent with both the observed surface and atmospheric temperatures
+
+* The skin temperature of the top of the atmosphere depends only on the net downward shortwave flux.  This is because absorptivity and
+   emissivity have to balance in the layer.
+   
+* Greenhouse gasses at the top atmosphere absorb much more than they emit.  This energy is mixed
+  throughout the atmospheric column by convection
 
 +++ {"user_expressions": []}
 
@@ -500,6 +556,17 @@ width: 85%
 
 +++ {"user_expressions": []}
 
+### Summary
+
+* The relationship between the emissivity and the greenhouse gas concentration is well-understood both theoretically and experimentally
+
+* The volume scattering coefficent, and therefore the optical depth, is a function of gas concentration and absorption line strength,
+  which in turn depends on wavelength, temperature, and atmospheric pressure.
+
+* Getting accurate heating and cooling rates in climate models is non-trivial, but essentially a solved problem.
+
++++ {"user_expressions": []}
+
 ## The Schwarzchild equation for radiance
 
 Using {eq}`eq:diff_tau` we can add an emission term to {eq}`diffbeer` to get the Schwarzchild equation for vertical radiance:
@@ -525,10 +592,10 @@ $$ (integ1)
 
 Impose boundary conditions and integrate from the top of the atmoshere down to optical depth $\tau_{\lambda T}$ to get the upward radiance at the top of the atmosphere, where $\tau = 0$:
 
- $$
+$$
     L(0)= B_\lambda(T_{sfc}) \exp(-\tau_{\lambda T}) +    \int_0^{\tau_{\lambda T}} \exp\left(-\tau^\prime \right )
     B_\lambda(T)\, d\tau^\prime
-$$ (calc2)
+$$ (eq:calc2)
 
 
 Since the transmission is defined as $t_r = \exp(-\tau)$, we can change variables and write:
@@ -547,6 +614,14 @@ $$
 L(0) = B_\lambda(T_{sfc})t_{rtot} + (1 - t_{rtot})B_\lambda(\hat{T})
 $$
 and that this corresponds to the situation depicted in {ref}`fig:single_layer`.
+
++++ {"user_expressions": []}
+
+### Summary
+
+* The Schwarzchild equation is a first-order ode that predicts the radiance along a path as a function of gas temperature and gas absorption
+
+* To be usefull in climate model calculations, a model has to integrate a solution along the absorber path, over all wavelengths and over a hemisphere to get the radiative flux passing through a model layer
 
 +++ {"user_expressions": []}
 
@@ -571,7 +646,7 @@ of the thermal emission of each layer to the upwelling radiance leaving the atmo
 
 For a "well-mixed" absorber like $CO_2$, in which
 the absorber mass fraction is constant with height, the
-absorber has density has an exponential profile:
+absorber density has an exponential profile:
 
 $$
 \rho_{gas}(z) = \rho_0 \exp(-z/H)
@@ -592,15 +667,14 @@ of the weighting function $dt_r/dz$ occurs at $\tau = 1$
 ### Figure examples
 
 
-{ref}`fig:tau_max` below shows a weighting function $dt_r/dz$ (short-dashed line)for this case. 
-
+{ref}`fig:tau_max` below shows a weighting function $dt_r/dz$ (short-dashed line)for this case.
 
 +++ {"user_expressions": []}
 
 ```{figure} figures/wh_unit_tau.png
 ---
 name: fig:tau_max
-width: 45%
+width: 75%
 ---
 
 Vertical transmissivity ($I_\lambda$ in this book's notation) as a function of height.
@@ -608,4 +682,144 @@ Vertical transmissivity ($I_\lambda$ in this book's notation) as a function of h
 
 +++ {"user_expressions": []}
 
+{ref}`fig:sounder` below shows the actual weighting functions and transmissivty profiles for
+a satellite radiometer that measures the vertical temperature profile using the 15 $\mu m$ $CO_2$ band.
+
+```{figure} figures/weighting_funs_wh.png
+---
+name: fig:sounder
+width: 55%
+---
+
+$CO_2$ weighting functions and transmissivity for a satellite sounder
+```
+
++++ {"user_expressions": []}
+
+Note that this is how the temperature retrievals were made in {ref}`fig:strat_cooling`
+
++++ {"user_expressions": []}
+
+### Summary
+
+* The weighting function selects the portion of the atmosphere that contributes most to outgoing emitted radiation to space.
+
+* As the optical depth increases at a particular wavelength (because of increased $CO_2$ concentration), the altitude of maximum emission
+  increases.
+  
+* In the troposphere, the temperature decreases with altitude, so emission at that wavelength will decrease, increasing the greenhouse effect.
+
++++ {"user_expressions": []}
+
 ## The Schwarzchild equation for flux
+
+So far we've restricted ourselves to a single vertical direction, and calculated the radiance along the vertical slant path $s=z$.  If we want to
+integrate over a hemisphere to get the flux, we're going to need to
+sample all angles, which means all slant paths $s = z/\cos \theta = z/\mu$
+
++++ {"user_expressions": []}
+
+```{figure} figures/diffuse_flux.png
+---
+name: fig:sounder
+width: 45%
+---
+
+Slant paths for thermal emission
+```
+
++++ {"user_expressions": []}
+
+### Slant path transmissivity
+
+The slant path version of {eq}`eq:calc2`:
+
+$$
+    L(0,\mu)= B_\lambda(T_{sfc}) \exp(-\tau_{\lambda T}/\mu) +    \int_0^{\tau_{\lambda T}} \exp\left(-\tau^\prime /\mu\right )
+    B_\lambda(T)\, \frac{d\tau^\prime}{\mu}
+$$ (eq:calc_slant)
+
+Assume azimuthal isotropy so we can integrate out $\int_0^{2\pi} d\phi = 2\pi$.  Then we're left with:
+
+$$
+\begin{align}
+E(0) &= 2\pi \int_0^1 \mu L(0,\mu) d\mu \\
+     & 2 \pi \int_0^1 \mu B_\lambda(T_{sfc}) \exp(-\tau_{\lambda T}/\mu) d\mu 
+        + 2  \pi \int_0^1  \int_0^{\tau_{\lambda T}} \mu \exp\left(-\tau^\prime /\mu\right )
+    B_\lambda(T)\, \frac{d\tau^\prime}{\mu} d\mu
+\end{align}
+$$ (eq:prediffuse)
+
+The Planck function is isotropic so can be taken out of the $\mu$ integral, so define the **flux transmission**:
+
+$$
+ \hat{t}_f =  2 \int_0^1 \mu \exp \left (- \frac{\tau }{\mu} \right ) d\mu
+$$(eq:fluxtran)
+
+Make the change of variables $u = \mu^{-1}$ to get the **third exponential integral**:
+
+$$
+ \hat{t}_f = 2 \int_1^\infty \frac{\exp(-u \tau)}{u^3} du = 2E_i(\tau)
+ $$
+which is available from scipy as `expn(3.0, tau)`.  Luckily, to a pretty good approximation
+we can fake the integration by just multiplying the optical depth by 5/3.  This is called
+the **diffusivity approximation**
+
+$$
+ \hat{t}_f = 2 \int_1^\infty \frac{\exp(-u \tau)}{u^3} du = 2E_i(\tau) = \exp(-1.66 \tau)
+$$ (eq:diffapprox)
+ 
+ The python code below compares $\exp(-1.66 \tau$ with $2E_i(\tau)$.  The approximation is very good for $\tau < 1$.
+
+```{code-cell} ipython3
+from matplotlib import pyplot as plt
+import numpy as np
+from scipy.special import expn
+tau = np.arange(0.1, 5, 0.1)
+flux_trans = 2 * expn(3.0, tau)
+fig, ax = plt.subplots(1, 1)
+ax.plot(tau, flux_trans, label="scipy 2Ei(3)")
+ax.plot(tau, np.exp(-1.66 * tau), label="-5/3 approx")
+ax.legend()
+ax.set(ylabel="flux_trans", xlabel=r"vertical optical depth $\tau$");
+```
+
++++ {"user_expressions": []}
+
+### The Schwarzchild equation under the diffusivity approximation
+
+Using the diffusivity approximation, {eq}`eq:prediffuse` can be rewritten as:
+
+$$
+\begin{align}
+E(0) = \underbrace{\pi B_\lambda(T_{sfc}) \hat{t}_{ftot}}_{\text{transmission}} + 
+ \underbrace{\pi \int_{\hat{t}_{ftot}}^1  B_\lambda(T) d\hat{t}_f}_{emission}
+\end{align}
+$$ (eq:postdiffuse)
+which is a close parallel to the radiance equation {eq}`eq:schwarz_tr`.
+
++++ {"user_expressions": []}
+
+### Summary
+
+* Thanks to the diffusivity approximation it is relatively easy to account for the impact of slant paths on radiation transport
+between vertical levels
+
++++ {"user_expressions": []}
+
+## Tropospheric warming and stratospheric cooling
+
+Recall from {ref}`fig:strat_cooling` that we are seeing warming in the troposphere and cooling in the  stratosphere 
+
+To get the greenhouse effect from {eq}`eq:postdiffuse`, we  need to subtract the surface flux:
+
+$$
+\begin{align}
+GH_\lambda &= \pi B_\lambda(T_{sfc}) - E(0) = \pi B_\lambda(T_{sfc}) ( 1 - \hat{t}_{ftot} ) - \pi \int_{\hat{t}_{ftot}}^1  B_\lambda(T) d\hat{t}_f\\
+&= \pi B_\lambda(T_{sfc}) ( 1 - \hat{t}_{ftot} ) - \pi B_\lambda(\hat{T})(1 - \hat{t}_{ftot})
+\end{align}
+$$
+
+To see why increasing greenhouse gasses cools the statosphere, note that in the stratosphere, $B_\lambda(T_{sfc}) < B_\lambda(\hat{T})$.
+As $CO_2$ concentration increases, the flux transmissivity $\hat{t}_{ftot}$ decreases.  With the temperature increasing with
+height, the result will be a net negative change in the greenhouse effect.
