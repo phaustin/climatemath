@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-+++ {"user_expressions": []}
++++ {"editable": true, "slideshow": {"slide_type": ""}, "user_expressions": []}
 
 # The greenhouse effect
 
@@ -142,7 +142,7 @@ $$ (planck_wn)
 
 $$
 \int_0^\infty \frac{u^3}{(e^u -1 )} du = \frac{\pi^4}{15} 
-$$
+$$ (planck_int)
 ([Riemann zeta function](https://en.wikipedia.org/wiki/Riemann_zeta_function))
 
 3. Show that the maximum value for {eq}`planck` occurs at:
@@ -178,7 +178,7 @@ $$
 
 ```{figure} figures/cartoon_budget.png
 ---
-name: cartoon_budget
+name: cartoon_budgetB
 width: 25%
 ---
 
@@ -239,7 +239,7 @@ $$
 
 $$
 d\omega = \frac{dA}{R^2} = \frac{R^2 \sin \theta d\theta  d\phi}{R^2} = \sin \theta d\theta  d\phi = -d\mu d\phi
-$$ (domegaA)
+$$ (domegaB)
 
 
 So the flux $dE$ reaching the telescope sensor from that field of view is the normal component of $L d\omega$:
@@ -392,7 +392,7 @@ $$ (eq:diff_tau)
 
 +++ {"user_expressions": []}
 
-(sec:single_layer)=
+(singlelayer)=
 ## A single-layer model of the greenhouse effect
 
 {ref}`fig:single_layer` below shows how $\epsilon$ is related to the upward and downward fluxes in an atmosphere overlying a black absorbing surface.  Note that due to Kirchoff's law, $\epsilon$ is representing both the emissivity and the absorptivity/transmissivity of the layer.
@@ -491,9 +491,9 @@ print(f"{Tskin=:.0f} K")
 
 +++ {"user_expressions": []}
 
-## Calculating the wavelength-dependent emissivity of a greenhouse gas
+## Calculating the wavelength-dependent emissivity of a greenhouse gas  -- pha
 
-In {ref}`Section 4 <sec:single_layer>` we found a wavelength-averaged $\epsilon$ consistent with current $S$ and surface temperature. 
+In {numref}`singlelayer` we found a wavelength-averaged $\epsilon$ consistent with current $S$ and surface temperature. 
 To move further, we need to link $\epsilon_\lambda$ to the volume absorption coefficient $\sigma_\lambda$
 for the greenhouse gas. To do this
 first decompose $\sigma_\lambda$ into two components:  The **absorber gas density** $\rho_{gas}\ (kg\,m^{-3})$, and the **mass absorption coefficient** $k_\lambda\ (m^{2}\,kg^{-1})$
@@ -625,6 +625,7 @@ and that this corresponds to the situation depicted in {ref}`fig:single_layer`.
 
 +++ {"user_expressions": []}
 
+(sec:weights)=
 ## Weighting functions
 
 +++ {"user_expressions": []}
@@ -721,7 +722,7 @@ sample all angles, which means all slant paths $s = z/\cos \theta = z/\mu$
 
 ```{figure} figures/diffuse_flux.png
 ---
-name: fig:sounder
+name: fig:diffuse
 width: 45%
 ---
 
@@ -823,3 +824,38 @@ $$
 To see why increasing greenhouse gasses cools the statosphere, note that in the stratosphere, $B_\lambda(T_{sfc}) < B_\lambda(\hat{T})$.
 As $CO_2$ concentration increases, the flux transmissivity $\hat{t}_{ftot}$ decreases.  With the temperature increasing with
 height, the result will be a net negative change in the greenhouse effect.
+
++++ {"user_expressions": []}
+
+## Conclusions
+
++++ {"user_expressions": []}
+
+### Greenhouse physics
+
+1) Greenhouse gases selectively absorb and emit longwave photons
+
+2) The earth cools by emission of longwave photons to space
+
+3) The height at which this emission occurs depends on both photon wavelength and the greenhouse gas, and is set by the atmospheric level at which
+   the optical depth $\tau = 1$
+   
+4) The gas temperature decreases with height in the toposphere (because thermal energy is used to lift the atmosphere above the surface)
+  
+5) We are increasing the greenhouse gas concentration, and therefore  moving altitude higher in the atmosphere.
+
+6) In the troposphere, this produces reduced emission colder temperatures, heating the atmosphere
+
+### Math concepts
+
+1. Integrals and derivatives -- e.g. {eq}`eq:tauz`, {numref}`sec:weights`
+
+1. Spherical coordinates, solid angle:  {eq}`domegaB`
+
+1. Working with differentials/Taylor series -- e.g.:
+
+   $$dt_r = d\exp(-\tau) = -\exp(-\tau)\,d\tau \approx -d\tau$$
+
+1. Change of variables -- e.g.: {eq}`planck_wn`
+
+1. ODEs/integrating factors  -- e.g. {eq}`eq:calc2`
