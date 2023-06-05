@@ -1,0 +1,1046 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The greenhouse effect</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pagestyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/index';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    <p class="title logo__title">None</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Material for greenhouse talk
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Material for greenhouse talk</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="material-for-greenhouse-talk">
+<h1>Material for greenhouse talk<a class="headerlink" href="#material-for-greenhouse-talk" title="Permalink to this headline">#</a></h1>
+<p>Slides and software for the greenhouse effect into</p>
+<ul class="simple">
+<li><p>questions comments to Phil Austin paustin&#64;eoas.ubc.ca</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+<span id="document-docs/greenhouse"></span><section class="tex2jax_ignore mathjax_ignore" id="understanding-the-greenhouse-effect">
+<h2><span class="section-number">1. </span>Understanding the greenhouse effect<a class="headerlink" href="#understanding-the-greenhouse-effect" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Presentation by Phil Austin, 2023/May/31</p></li>
+</ul>
+<section id="big-picture">
+<h3><span class="section-number">1.1. </span>Big picture<a class="headerlink" href="#big-picture" title="Permalink to this headline">#</a></h3>
+<p>The greenhouse effect is the change in longwave radiation escaping to space due to the presence of an atmosphere.</p>
+<p>(Note that this doesn’t have much to do with actual greenhouses)</p>
+<p>It depends on the vertical profiles of the absorptivity and temperature of the greenhouse gas (and liquid and ice particles, if we’re considering clouds).</p>
+<section id="a-specific-example-the-earth-s-current-atmosphere">
+<h4><span class="section-number">1.1.1. </span>A specific example – the Earth’s current atmosphere<a class="headerlink" href="#a-specific-example-the-earth-s-current-atmosphere" title="Permalink to this headline">#</a></h4>
+<p>GH = -239 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> - (-398) <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span>  = 159 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span></p>
+<figure class="align-default" id="cartoon-budget">
+<a class="reference internal image-reference" href="../_images/cartoon_budget.png"><img alt="../_images/cartoon_budget.png" src="../_images/cartoon_budget.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Estimated energy fluxes, current climate</span><a class="headerlink" href="#cartoon-budget" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="important-points">
+<span id="sec-points"></span><h4><span class="section-number">1.1.2. </span>Important points:<a class="headerlink" href="#important-points" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>The atmosphere absorbs and emits longwave radiation.</p></li>
+<li><p>Increasing greenhouse gas concentration increases the emissivity of the atmosphere
+(note the contradiction with <a class="reference external" href="https://www.dropbox.com/s/1ym7dnxtehvy5fq/ANS_05_19_Draft_SCIE001_EBM_HW.pdf?dl=0">Homework 1</a> ).  There is
+an important distinction between <strong>emission</strong> (net emitted flux in <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span>) and <strong>emissivity</strong>
+(unitless, the relative ability of a gas molecule to emit a photon compared to a blackbody)</p></li>
+<li><p><strong>To first order, absorption is independent of temperature, while emission is a strong function of temperature</strong></p></li>
+<li><p>Because the atmosphere is colder than the surface, it absorbs radiation from the surface and emits less radiation to space.  Increasing emissivity decreases emission because it moves the emission layer to higher altitudes/colder temperatures.</p></li>
+<li><p>This reduction in surface radiative cooling by the atmosphere is the atmospheric greenhouse effect.</p></li>
+<li><p>Any successful theory of the the anthropogenic greenhouse has to explain both <strong>tropospheric warming</strong> and <strong>stratospheric cooling</strong></p></li>
+</ul>
+<figure class="align-default" id="fig-strat-cooling">
+<a class="reference internal image-reference" href="../_images/stratospheric_cooling.png"><img alt="../_images/stratospheric_cooling.png" src="../_images/stratospheric_cooling.png" style="width: 65%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Decacal temperature trends (K/decade) between 2002-2022</span><a class="headerlink" href="#fig-strat-cooling" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="outline">
+<h3><span class="section-number">1.2. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">#</a></h3>
+<p>3. Basic concepts</p>
+<ul class="simple">
+<li><p>Flux and radiance, Planck’s law, Beer’s law and Kirchoff’s law, optical depth</p></li>
+</ul>
+<p>4. The single layer greenhouse</p>
+<ul class="simple">
+<li><p>Simple model of an absorbing and emitting atmosphere over a black surface</p></li>
+</ul>
+<p>5. Wavelength dependent emissivity</p>
+<ul class="simple">
+<li><p>Absorption spectra for greenhouse gasses</p></li>
+</ul>
+<p>6. The Schwarzchild equation for radiance</p>
+<ul class="simple">
+<li><p>Governing ode for absorption and emission</p></li>
+</ul>
+<p>7. Weighting functions, emission level and the greenhouse effect</p>
+<ul class="simple">
+<li><p>The link between <span class="math notranslate nohighlight">\(CO_2\)</span> concentration, photon emission level and the greenhouse effect</p></li>
+</ul>
+<p>8. The Schwarzchild equation for flux</p>
+<ul class="simple">
+<li><p>Integrating the radiance to calculate the upward flux</p></li>
+</ul>
+<p>9. Tropospheric warming and stratospheric cooling</p>
+<ul class="simple">
+<li><p>Calculating the impact of the temperature profile on the greenhouse effect</p></li>
+<li><p>Introduce a notebook to solve the Schwartzchild equation for realistic atmospheres</p></li>
+</ul>
+<p>10. Summary</p>
+</section>
+<section id="basic-concepts">
+<h3><span class="section-number">1.3. </span>Basic concepts<a class="headerlink" href="#basic-concepts" title="Permalink to this headline">#</a></h3>
+<section id="planck-s-law">
+<h4><span class="section-number">1.3.1. </span>Planck’s law<a class="headerlink" href="#planck-s-law" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>Electromagnetic emission obeys <a class="reference external" href="https://arstechnica.com/science/2013/03/squeezing-more-information-out-of-the-cosmic-microwave-background/">Planck’s law</a>:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-planck">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-planck" title="Permalink to this equation">#</a></span>\[
+B_\lambda(\lambda, T)=\frac{2 h c^2}{\lambda^5} \frac{1}{e^{h c /\left(\lambda k_{\mathrm{B}} T\right)}-1}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(T\)</span> is temperature, <span class="math notranslate nohighlight">\(\lambda\)</span> is wavelength, <span class="math notranslate nohighlight">\(k_B\)</span> is Boltzman’s constant, <span class="math notranslate nohighlight">\(h\)</span> is Planck’s constant and <span class="math notranslate nohighlight">\(c\)</span> is the speed of light.</p>
+<p><span class="math notranslate nohighlight">\(B_\lambda\)</span> is called the “monochromatic blackbody radiance”, and has units of <span class="math notranslate nohighlight">\(W\,m^{-2}\,\mu m^{-1}\,sr^{-1}\)</span> (in words: Watts per
+square meter per micron bin width per steradian field of view)</p>
+<p>Integrating <a class="reference internal" href="#equation-planck">(1.1)</a> over all wavelengths yields the Stefan-Boltzman equation for flux:</p>
+<div class="math notranslate nohighlight" id="equation-eq-stefan">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-eq-stefan" title="Permalink to this equation">#</a></span>\[
+\int_0^\infty B_\lambda(\lambda, T) d\lambda = \frac{\sigma}{\pi} T^4\ (W\,m^{-2})
+\]</div>
+<figure class="align-default" id="wh-trans">
+<a class="reference internal image-reference" href="../_images/wh_planck_plus_trans.png"><img alt="../_images/wh_planck_plus_trans.png" src="../_images/wh_planck_plus_trans.png" style="width: 65%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.3 </span><span class="caption-text">Selective absorption by greenhouse gases.  Note the 15 <span class="math notranslate nohighlight">\(\mu m\)</span> <span class="math notranslate nohighlight">\(CO_2\)</span> band coincides with the Planck peak emission at 255 K.</span><a class="headerlink" href="#wh-trans" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="sample-problems">
+<h5><span class="section-number">1.3.1.1. </span>Sample Problems<a class="headerlink" href="#sample-problems" title="Permalink to this headline">#</a></h5>
+<ol class="arabic simple">
+<li><p>Use change of variables to rewrite <a class="reference internal" href="#equation-planck">(1.1)</a> in terms of wavenumber <span class="math notranslate nohighlight">\(\tilde{\nu} = 1/\lambda\)</span> and show that it is:</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-planck-wn">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-planck-wn" title="Permalink to this equation">#</a></span>\[
+B_{\tilde{\nu}}(\tilde{\nu}, T)=2 h c^2 \tilde{\nu}^3 \frac{1}{e^{h c \tilde{\nu} /\left(k_{\mathrm{B}} T\right)}-1}
+\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Integrate <a class="reference internal" href="#equation-planck-wn">(1.3)</a> to find the Stefan-Boltzman equation given that</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-planck-int">
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-planck-int" title="Permalink to this equation">#</a></span>\[
+\int_0^\infty \frac{u^3}{(e^u -1 )} du = \frac{\pi^4}{15} 
+\]</div>
+<p>(<a class="reference external" href="https://en.wikipedia.org/wiki/Riemann_zeta_function">Riemann zeta function</a>)</p>
+<ol class="arabic simple" start="3">
+<li><p>Show that the maximum value for <a class="reference internal" href="#equation-planck">(1.1)</a> occurs at:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\lambda_{max} \propto \frac{1}{T}
+\]</div>
+<p>(<a class="reference external" href="https://en.wikipedia.org/wiki/Wien%27s_displacement_law">Wien’s law</a>)</p>
+</section>
+</section>
+<section id="definition-flux">
+<h4><span class="section-number">1.3.2. </span>Definition: <a class="reference external" href="https://en.wikipedia.org/wiki/Radiometry">flux</a><a class="headerlink" href="#definition-flux" title="Permalink to this headline">#</a></h4>
+<ul>
+<li><p>Flux density (or irradiance)</p>
+<p>Units: <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span></p>
+<p>Definition: electromagnetic energy passing through unit area in unit time</p>
+<p>Symbol: E</p>
+<p>(for physicists – we’re talking about <span class="math notranslate nohighlight">\(S\)</span>, the <a class="reference external" href="https://en.wikipedia.org/wiki/Poynting_vector">Poynting vector</a> )</p>
+<p>Not conserved in a vacuum – flux decreases as <span class="math notranslate nohighlight">\(1/\text{distance}^2\)</span></p>
+</li>
+<li><p>Some assumptions for undergraduates</p>
+<ul class="simple">
+<li><p>Shortwave flux: all photons with wavelengths <span class="math notranslate nohighlight">\(\lt\)</span> 4 <span class="math notranslate nohighlight">\(\mu m\)</span> are emitted by the sun</p></li>
+<li><p>Shortwave flux: neglect absorption</p></li>
+<li><p>Longwave flux: all photons with wavelengths <span class="math notranslate nohighlight">\(\gt\)</span> 4 <span class="math notranslate nohighlight">\(\mu m\)</span> are emitted by terestrial solids, fluids or gasses</p></li>
+<li><p>Shortwave flux from the sun (the <em>direct beam</em>) is directional/collimated, scattering dominates</p></li>
+<li><p>Longwave flux is isotropic, scattering is negligible</p></li>
+</ul>
+</li>
+</ul>
+<figure class="align-default" id="cartoon-budgetb">
+<a class="reference internal image-reference" href="../_images/cartoon_budget.png"><img alt="../_images/cartoon_budget.png" src="../_images/cartoon_budget.png" style="width: 25%;" /></a>
+</figure>
+</section>
+<section id="more-useful-for-radiative-transfer-radiance">
+<h4><span class="section-number">1.3.3. </span>More useful for radiative transfer: <a class="reference external" href="https://en.wikipedia.org/wiki/Radiometry">radiance</a><a class="headerlink" href="#more-useful-for-radiative-transfer-radiance" title="Permalink to this headline">#</a></h4>
+<p>The flux has two undesirable properties:</p>
+<ul class="simple">
+<li><p>Not easy to measure directly (because no instrument can sample over a complete hemisphere)</p></li>
+<li><p>Isn’t conserved in a vacuum (decreases with distance R from the emitter as <span class="math notranslate nohighlight">\(1/R^2\)</span>)</p></li>
+</ul>
+<p>Satellites/telescopes measure the <em>radiance</em></p>
+<ul>
+<li><p>Radiance</p>
+<p>Units: <span class="math notranslate nohighlight">\(W\,m^{-2}\,sr^{-1}\)</span></p>
+<p>Definition: electromagnetic energy passing though unit area in unit time in unit field of view</p>
+<p>Symbol: L</p>
+<p>Conserved in a vacuum</p>
+</li>
+</ul>
+<section id="sample-problem-relate-the-radiance-and-the-flux">
+<h5><span class="section-number">1.3.3.1. </span>Sample problem: Relate the radiance and the flux<a class="headerlink" href="#sample-problem-relate-the-radiance-and-the-flux" title="Permalink to this headline">#</a></h5>
+<p>We can integrate the normal component of the radiance over a hemisphere to get the flux</p>
+<figure class="align-default" id="test-label">
+<a class="reference internal image-reference" href="../_images/solid_angle.png"><img alt="../_images/solid_angle.png" src="../_images/solid_angle.png" style="width: 35%;" /></a>
+</figure>
+<p>Consider an instrument on the ground looking upward with a limited field of view <span class="math notranslate nohighlight">\(d\omega\)</span>.  At radius <span class="math notranslate nohighlight">\(r\)</span> the telescope is
+subtending an area <span class="math notranslate nohighlight">\(dA\)</span> where:</p>
+<div class="math notranslate nohighlight">
+\[
+dA = width \times height = R \sin \theta d\phi \times r d\theta = R^2  \sin \theta d\theta d \phi
+\]</div>
+<div class="math notranslate nohighlight" id="equation-domegaa">
+<span class="eqno">(1.5)<a class="headerlink" href="#equation-domegaa" title="Permalink to this equation">#</a></span>\[
+d\omega = \frac{dA}{R^2} = \frac{R^2 \sin \theta d\theta  d\phi}{R^2} = \sin \theta d\theta  d\phi
+\]</div>
+<p>It’s common to do a change of variables:</p>
+<div class="math notranslate nohighlight">
+\[
+\mu = cos\theta
+\]</div>
+<div class="math notranslate nohighlight" id="equation-domegab">
+<span class="eqno">(1.6)<a class="headerlink" href="#equation-domegab" title="Permalink to this equation">#</a></span>\[
+d\omega = \frac{dA}{R^2} = \frac{R^2 \sin \theta d\theta  d\phi}{R^2} = \sin \theta d\theta  d\phi = -d\mu d\phi
+\]</div>
+<p>So the flux <span class="math notranslate nohighlight">\(dE\)</span> reaching the telescope sensor from that field of view is the normal component of <span class="math notranslate nohighlight">\(L d\omega\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+dE = \int_{\phi_1}^{\phi_2} \int_{\mu_1}^{\mu_2} \cos \theta L d\mu d\phi = \int_{\phi_1}^{\phi_2} \int_{\mu_1}^{\mu_2} \mu L d\mu d\phi
+\]</div>
+<p>If the radiance is isotropic (say we are hovering close to the ocean surface, looking downward, or orbiting a planet without an atmosphere), then the total flux is just:</p>
+<div class="math notranslate nohighlight">
+\[
+E = L \int_{0}^{2 \pi} \int_{0}^{1}  \mu  d\mu d\phi = 2 \pi \frac{\mu^2}{2} L = \pi L
+\]</div>
+<p><strong>Note</strong>: this is why there is a factor of <span class="math notranslate nohighlight">\(1/\pi\)</span> in <a class="reference internal" href="#equation-eq-stefan">(1.2)</a>.</p>
+<p><strong>Question</strong>:  Why doesn’t the perceived brightness of a piece of white paper obey the inverse-square law for flux?</p>
+</section>
+</section>
+<section id="beer-s-law-transmission-and-absorption-of-radiance">
+<h4><span class="section-number">1.3.4. </span>Beer’s law: Transmission and absorption of radiance<a class="headerlink" href="#beer-s-law-transmission-and-absorption-of-radiance" title="Permalink to this headline">#</a></h4>
+<p>Given the radiance, we can write a differential equation to describe absorption by a greenhouse gas.</p>
+<p>We define the “absorptivity” <span class="math notranslate nohighlight">\(a\)</span> for a greenhouse gas as</p>
+<div class="math notranslate nohighlight">
+\[
+a = \frac{dL}{L}
+\]</div>
+<p><a class="reference internal" href="#beers-layer"><span class="std std-numref">Fig. 1.4</span></a> illustrates the two quantities we need to quantify the absorptivity: <span class="math notranslate nohighlight">\(ds\)</span> (m) is the <strong>slant path</strong> and <span class="math notranslate nohighlight">\(\sigma\)</span> (<span class="math notranslate nohighlight">\(m^2\,m^{-3}\)</span>) is the <strong>volume absorption coefficient</strong>.</p>
+<figure class="align-default" id="beers-layer">
+<a class="reference internal image-reference" href="../_images/beers_layer.png"><img alt="../_images/beers_layer.png" src="../_images/beers_layer.png" style="width: 25%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.4 </span><span class="caption-text">An atmospheric layer with absorptivity <span class="math notranslate nohighlight">\(a\)</span></span><a class="headerlink" href="#beers-layer" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Beer’s law (really Maxwell’s equations) states that:</p>
+<div class="math notranslate nohighlight" id="equation-diffbeer">
+<span class="eqno">(1.7)<a class="headerlink" href="#equation-diffbeer" title="Permalink to this equation">#</a></span>\[
+dL = -L \sigma ds = -L d\tau
+\]</div>
+<p>where we’ve introduced a new variable, the <span class="math notranslate nohighlight">\(\tau = \int \sigma ds\)</span>, the <strong>optical depth</strong>.</p>
+<p>Integrating equation <a class="reference internal" href="#equation-diffbeer">(1.7)</a> yields the <strong>transmissivity</strong> for the layer:</p>
+<div class="math notranslate nohighlight" id="equation-eq-trans">
+<span class="eqno">(1.8)<a class="headerlink" href="#equation-eq-trans" title="Permalink to this equation">#</a></span>\[
+t_r = L/L_0 = \exp(-\tau)
+\]</div>
+<p>The optical depth is the fundamental scaling property for a radiating atmosphere.</p>
+</section>
+<section id="conservation-of-energy">
+<h4><span class="section-number">1.3.5. </span>Conservation of energy<a class="headerlink" href="#conservation-of-energy" title="Permalink to this headline">#</a></h4>
+<p>An additional constraint is that every photon must be absorbed, transmitted or reflected.  Recall that we’re neglecting reflection in the longwave, so the energy constraint is:</p>
+<div class="math notranslate nohighlight" id="equation-eq-thin">
+<span class="eqno">(1.9)<a class="headerlink" href="#equation-eq-thin" title="Permalink to this equation">#</a></span>\[
+t_{r\lambda} + a_\lambda = 1
+\]</div>
+<p>Taking the differential of <a class="reference internal" href="#equation-eq-thin">(1.9)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-diff-energy">
+<span class="eqno">(1.10)<a class="headerlink" href="#equation-eq-diff-energy" title="Permalink to this equation">#</a></span>\[
+dt_{r \lambda} = -da_\lambda = -d\tau_\lambda
+\]</div>
+</section>
+<section id="sample-problem-relating-the-volume-absorption-coefficient-sigma-to-the-mean-free-path">
+<h4><span class="section-number">1.3.6. </span>Sample problem: Relating the volume absorption coefficient <span class="math notranslate nohighlight">\(\sigma\)</span> to the mean free path<a class="headerlink" href="#sample-problem-relating-the-volume-absorption-coefficient-sigma-to-the-mean-free-path" title="Permalink to this headline">#</a></h4>
+<p>How far can a photon travel before it’s absorbed?</p>
+<p>The probability that an absorption event will occur in distance <span class="math notranslate nohighlight">\(d s\)</span> is just the fraction of photons that make it through <span class="math notranslate nohighlight">\(ds\)</span> without
+being absorbed:</p>
+<div class="math notranslate nohighlight">
+\[
+p(s)\,ds = \exp(-(\sigma \,s)) - \exp(-(\sigma (s + ds ))
+\]</div>
+<p>take the limit to get the PDF for an absorption event:</p>
+<div class="math notranslate nohighlight">
+\[
+p(s)= \frac{d \exp(-(\sigma \,s)) }{ds} = -\sigma \exp(-(\sigma s))
+\]</div>
+<p>The first moment of <span class="math notranslate nohighlight">\(p(s)\)</span> is the mean distance traveled before an absorption:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle s \rangle = \int_0^\infty\, s \, p(s)\,ds = \int_0^\infty s\  \exp(-\sigma s)\, ds = \frac{1}{\sigma}
+\]</div>
+<p>So the volume absorption coefficient is the inverse of the average distance a photon travels from emission to absorption</p>
+</section>
+<section id="kirchoff-s-law-a-lambda-epsilon-lambda">
+<h4><span class="section-number">1.3.7. </span>Kirchoff’s law:  <span class="math notranslate nohighlight">\(a_\lambda = \epsilon_\lambda\)</span><a class="headerlink" href="#kirchoff-s-law-a-lambda-epsilon-lambda" title="Permalink to this headline">#</a></h4>
+<p>“Good absorbers are good emitters”</p>
+<p>As the transmissivty plots in <a class="reference internal" href="#wh-trans"><span class="std std-numref">Fig. 1.3</span></a> indicate, greenhouse gasses are extremely selective absorbers.
+An important result from statistical mechanics:  any gas in local thermodynamic equilibrium at temperature T that is absorbing radiation at wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> will be emitting radiance</p>
+<div class="math notranslate nohighlight">
+\[
+L_{emitted} = \epsilon_\lambda B_\lambda(\lambda, T)
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(\epsilon_\lambda\)</span> is the <strong>monochromatic emissivity</strong> (unitless).</p>
+<p><a class="reference internal" href="#kirchoff"><span class="std std-numref">Fig. 1.5</span></a> below shows why <span class="math notranslate nohighlight">\(\epsilon_\lambda = a_\lambda\)</span> in a collision dominated system.  Since the plates are horizontally infinite, the gas is absorbing flux <span class="math notranslate nohighlight">\(2 a_\lambda \pi B(\lambda, 300)\)</span> from the black plates, and
+emitting <span class="math notranslate nohighlight">\(2 \epsilon_\lambda \pi B(\lambda, 300)\)</span> back to the plates.  If <span class="math notranslate nohighlight">\(a_\lambda \neq \epsilon_\lambda\)</span>, the temperature of the gas would
+change, violating the 2nd law of thermodynamics.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+2 a_\lambda \pi B(\lambda, 300) &amp;= 2 \epsilon_\lambda \pi B(\lambda, 300)\\
+a_\lambda &amp;= \epsilon_\lambda
+\end{align}
+\end{split}\]</div>
+<figure class="align-default" id="kirchoff">
+<a class="reference internal image-reference" href="../_images/kirchoff.png"><img alt="../_images/kirchoff.png" src="../_images/kirchoff.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.5 </span><span class="caption-text">A greenhouse gas with aborptivity <span class="math notranslate nohighlight">\(a_\lambda\)</span> and emissivity <span class="math notranslate nohighlight">\(\epsilon_\lambda\)</span> between two black plates</span><a class="headerlink" href="#kirchoff" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Using <a class="reference internal" href="#equation-eq-diff-energy">(1.10)</a> we also have for the differentials:</p>
+<div class="math notranslate nohighlight" id="equation-eq-diff-tau">
+<span class="eqno">(1.11)<a class="headerlink" href="#equation-eq-diff-tau" title="Permalink to this equation">#</a></span>\[
+da_\lambda = d\epsilon_\lambda = d\tau_\lambda
+\]</div>
+</section>
+<section id="summary">
+<h4><span class="section-number">1.3.8. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>The optical depth <span class="math notranslate nohighlight">\(\tau\)</span> scales the change in absorption and emission in the atmosphere</p></li>
+<li><p><span class="math notranslate nohighlight">\(\tau\)</span> is a very strong function of wavelength, due to the wavelength dependence of the volume absorption coefficient</p></li>
+<li><p><span class="math notranslate nohighlight">\(d\tau\)</span> is closely related to the mean free path, transmissivity, absorptivity of thin atmospheric layers</p></li>
+<li><p>Given an optical depth profile, Beer’s law predicts the path dependent absorption of incident radiation</p></li>
+</ul>
+</section>
+</section>
+<section id="a-single-layer-model-of-the-greenhouse-effect">
+<span id="singlelayer"></span><h3><span class="section-number">1.4. </span>A single-layer model of the greenhouse effect<a class="headerlink" href="#a-single-layer-model-of-the-greenhouse-effect" title="Permalink to this headline">#</a></h3>
+<p><a class="reference internal" href="#fig-single-layer"><span class="std std-numref">Fig. 1.6</span></a> below shows how <span class="math notranslate nohighlight">\(\epsilon\)</span> is related to the upward and downward fluxes in an atmosphere overlying a black absorbing surface.  Note that due to Kirchoff’s law, <span class="math notranslate nohighlight">\(\epsilon\)</span> is representing both the emissivity and the absorptivity/transmissivity of the layer.</p>
+<figure class="align-default" id="fig-single-layer">
+<a class="reference internal image-reference" href="../_images/single_layer.png"><img alt="../_images/single_layer.png" src="../_images/single_layer.png" style="width: 40%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.6 </span><span class="caption-text">An atmospheric layer with emitted flux with emissivity/absorptivity <span class="math notranslate nohighlight">\(\epsilon\)</span>, emitted flux <span class="math notranslate nohighlight">\(A\)</span>,
+incoming shortwave flux <span class="math notranslate nohighlight">\(S\)</span> and upwelling flux from below <span class="math notranslate nohighlight">\(G\)</span></span><a class="headerlink" href="#fig-single-layer" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In equilibrium, the net flux has to be zero at both top and bottom boundaries.</p>
+<p>Solving for the unknown fluxes <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(G\)</span> gives:</p>
+<div class="math notranslate nohighlight" id="equation-eq-thinlim">
+<span class="eqno">(1.12)<a class="headerlink" href="#equation-eq-thinlim" title="Permalink to this equation">#</a></span>\[
+A = \frac{\varepsilon S}{\left( 2 - \varepsilon \right)} = \varepsilon \sigma T_{A}^{4}
+\]</div>
+<div class="math notranslate nohighlight">
+\[G = \frac{2S}{\left( 2 - \varepsilon \right)} = \sigma T_{G}^{4}\]</div>
+<p>and rearranging:</p>
+<div class="math notranslate nohighlight" id="equation-eq-ta">
+<span class="eqno">(1.13)<a class="headerlink" href="#equation-eq-ta" title="Permalink to this equation">#</a></span>\[
+T_A = \sqrt[4]{\frac{S}{(2 - \varepsilon) \sigma}} 
+\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-tg">
+<span class="eqno">(1.14)<a class="headerlink" href="#equation-eq-tg" title="Permalink to this equation">#</a></span>\[
+T_G = \sqrt[4]{\frac{2 S}{(2 - \varepsilon) \sigma}}
+\]</div>
+<figure class="align-default" id="variable-eps">
+<a class="reference internal image-reference" href="../_images/variable_eps.jpeg"><img alt="../_images/variable_eps.jpeg" src="../_images/variable_eps.jpeg" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.7 </span><span class="caption-text">An atmospheric layer with emitted flux with emissivity/absorptivity <span class="math notranslate nohighlight">\(\epsilon\)</span>, emitted flux <span class="math notranslate nohighlight">\(A\)</span>,
+incoming shortwave flux <span class="math notranslate nohighlight">\(S\)</span> and upwelling flux from below <span class="math notranslate nohighlight">\(G\)</span></span><a class="headerlink" href="#variable-eps" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="sanity-check-average-emissivity-at-current-solar-constant-s">
+<h4><span class="section-number">1.4.1. </span>Sanity Check: average emissivity at current solar constant S<a class="headerlink" href="#sanity-check-average-emissivity-at-current-solar-constant-s" title="Permalink to this headline">#</a></h4>
+<p>For current solar output  and a planetary reflectivity of 30%, <span class="math notranslate nohighlight">\(S=240\ W\,m^{-2}\)</span>.  With this solar constant <a class="reference internal" href="#equation-eq-tg">(1.14)</a> gives a surface temperature of 287 K (the current global average) with an emissivity of <span class="math notranslate nohighlight">\(\epsilon = 0.75\)</span></p>
+<p>This isn’t too far from the approximate observed average longwave emissivity of 0.8.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S</span><span class="o">=</span><span class="mi">240</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mf">5.67e-8</span>
+<span class="n">eps</span> <span class="o">=</span> <span class="mf">0.75</span>
+<span class="n">Tg</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">S</span><span class="o">/</span><span class="p">((</span><span class="mi">2</span> <span class="o">-</span> <span class="n">eps</span><span class="p">)</span><span class="o">*</span><span class="n">sigma</span><span class="p">))</span><span class="o">**</span><span class="mf">0.25</span>
+<span class="n">Ta</span> <span class="o">=</span> <span class="p">(</span><span class="n">S</span><span class="o">/</span><span class="p">((</span><span class="mi">2</span> <span class="o">-</span> <span class="n">eps</span><span class="p">)</span><span class="o">*</span><span class="n">sigma</span><span class="p">))</span><span class="o">**</span><span class="mf">0.25</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Tg</span><span class="si">=:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> K, </span><span class="si">{</span><span class="n">Ta</span><span class="si">=:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> K&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tg=287 K, Ta=241 K
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="thin-layer-limit-the-skin-temperature-is-independent-of-epsilon">
+<h4><span class="section-number">1.4.2. </span>Thin layer limit: The skin temperature is independent of <span class="math notranslate nohighlight">\(\epsilon\)</span><a class="headerlink" href="#thin-layer-limit-the-skin-temperature-is-independent-of-epsilon" title="Permalink to this headline">#</a></h4>
+<p>If we change the interpretation of the flux G in <a class="reference internal" href="#fig-single-layer"><span class="std std-numref">Fig. 1.6</span></a> to be the total upward flux from the surface
+and lower atmosphere, then we can find the
+“skin temperature” at the top of the atmosphere by taking the thin layer limit <span class="math notranslate nohighlight">\(\epsilon \rightarrow 0\)</span> in <a class="reference internal" href="#equation-eq-thinlim">(1.12)</a> and get</p>
+<div class="math notranslate nohighlight" id="equation-eq-skin">
+<span class="eqno">(1.15)<a class="headerlink" href="#equation-eq-skin" title="Permalink to this equation">#</a></span>\[
+T_{skin} = \sqrt[4]{\frac{S}{2 \sigma}}
+\]</div>
+<p>Putting <span class="math notranslate nohighlight">\(S=240\ W\,m^{-2}\)</span> into <a class="reference internal" href="#equation-eq-skin">(1.15)</a> yields <span class="math notranslate nohighlight">\(T_{skin}\)</span> = 214 K, <strong>independent of the greenhouse gas concentration</strong>.  This is a good approximation to <a class="reference external" href="http://climatemodels.uchicago.edu/modtran/">observed atmospheric temperatures</a> at the tropopause.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tskin</span> <span class="o">=</span> <span class="p">(</span><span class="n">S</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">sigma</span><span class="p">))</span><span class="o">**</span><span class="mf">0.25</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Tskin</span><span class="si">=:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> K&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tskin=214 K
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h4><span class="section-number">1.4.3. </span>Summary<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>A single layer model of an equilibrium atmosphere is consistent with both the observed surface and atmospheric temperatures</p></li>
+<li><p>The skin temperature of the top of the atmosphere depends only on the net downward shortwave flux.  This is because absorptivity and
+emissivity have to balance in the layer.</p></li>
+<li><p>Greenhouse gasses at the top atmosphere absorb much more than they emit.  This energy is mixed
+throughout the atmospheric column by convection</p></li>
+</ul>
+</section>
+</section>
+<section id="calculating-the-wavelength-dependent-emissivity-of-a-greenhouse-gas">
+<h3><span class="section-number">1.5. </span>Calculating the wavelength-dependent emissivity of a greenhouse gas<a class="headerlink" href="#calculating-the-wavelength-dependent-emissivity-of-a-greenhouse-gas" title="Permalink to this headline">#</a></h3>
+<p>In <a class="reference internal" href="#singlelayer"><span class="std std-numref">Section 1.4</span></a> we found a wavelength-averaged <span class="math notranslate nohighlight">\(\epsilon\)</span> consistent with current <span class="math notranslate nohighlight">\(S\)</span> and surface temperature.
+To move further, we need to link <span class="math notranslate nohighlight">\(\epsilon_\lambda\)</span> to the volume absorption coefficient <span class="math notranslate nohighlight">\(\sigma_\lambda\)</span>
+for the greenhouse gas. To do this
+first decompose <span class="math notranslate nohighlight">\(\sigma_\lambda\)</span> into two components:  The <strong>absorber gas density</strong> <span class="math notranslate nohighlight">\(\rho_{gas}\ (kg\,m^{-3})\)</span>, and the <strong>mass absorption coefficient</strong> <span class="math notranslate nohighlight">\(k_\lambda\ (m^{2}\,kg^{-1})\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_\lambda = \rho_{gas} k_\lambda
+\]</div>
+<p>How do we calculate <span class="math notranslate nohighlight">\(k_\lambda\)</span>?  There are <a class="reference external" href="https://en.wikipedia.org/wiki/HITRAN">absorption coefficient databases</a> that provide <a class="reference external" href="https://en.wikipedia.org/wiki/HITRAN#/media/File:Transmission_Spectra_Gif.gif">“line by line”</a> <span class="math notranslate nohighlight">\(k_\lambda\)</span> values for individual energy level transitions.</p>
+<p>These absorption lines are then parameterized for use in
+variety of <a class="reference external" href="https://en.wikipedia.org/wiki/Atmospheric_radiative_transfer_codes">radiative transfer models</a> like
+<a class="reference external" href="http://climatemodels.uchicago.edu/modtran/">Modtran</a></p>
+<section id="three-co-2-absorption-lines">
+<h4><span class="section-number">1.5.1. </span>Three <span class="math notranslate nohighlight">\(CO_2\)</span> absorption lines<a class="headerlink" href="#three-co-2-absorption-lines" title="Permalink to this headline">#</a></h4>
+<figure class="align-default" id="co2-lines">
+<a class="reference internal image-reference" href="../_images/co2_bending.png"><img alt="../_images/co2_bending.png" src="../_images/co2_bending.png" style="width: 35%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.8 </span><span class="caption-text">Three <span class="math notranslate nohighlight">\(CO_2\)</span> absorption lines: 7 <span class="math notranslate nohighlight">\(\mu m\)</span>, 15 <span class="math notranslate nohighlight">\(\mu m\)</span>, and 4.3 <span class="math notranslate nohighlight">\(\mu m\)</span></span><a class="headerlink" href="#co2-lines" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="full-spectra-for-3-greenhouse-gasses">
+<h4><span class="section-number">1.5.2. </span>Full spectra for 3 greenhouse gasses<a class="headerlink" href="#full-spectra-for-3-greenhouse-gasses" title="Permalink to this headline">#</a></h4>
+<p>Note that in the <span class="math notranslate nohighlight">\(CO_2\)</span> band between 550-700 <span class="math notranslate nohighlight">\(cm^{-1}\)</span> (14-18 <span class="math notranslate nohighlight">\(\mu m\)</span>) <span class="math notranslate nohighlight">\(k_\lambda\)</span> <strong>varies by about 5 orders of magntude</strong>.</p>
+<figure class="align-default" id="fig-full-spectrum">
+<a class="reference internal image-reference" href="../_images/methane_co2.png"><img alt="../_images/methane_co2.png" src="../_images/methane_co2.png" style="width: 65%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.9 </span><span class="caption-text"><span class="math notranslate nohighlight">\(k_\lambda\)</span> spectrum for <span class="math notranslate nohighlight">\(CO_2\)</span> (gray), <span class="math notranslate nohighlight">\(CH_4\)</span> (black), <span class="math notranslate nohighlight">\(H_2O\)</span> (grey).</span><a class="headerlink" href="#fig-full-spectrum" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="aside-lebesgue-integration-for-climate-model-parameterizations">
+<h4><span class="section-number">1.5.3. </span>Aside: Lebesgue integration for climate model parameterizations<a class="headerlink" href="#aside-lebesgue-integration-for-climate-model-parameterizations" title="Permalink to this headline">#</a></h4>
+<p>Global climate models parameterize the wavelength, temperature and pressure dependence of the various absorption bands using the <a class="reference external" href="https://link.springer.com/article/10.1134/S2070048216020125">“correlated-k”</a> approximation, which is a variant of Lebesque integration.  It reduces the number of quadrature
+points needed to integrate absorption bands by 4-5 orders of magnitude.</p>
+<figure class="align-default" id="fig-corr-k">
+<a class="reference internal image-reference" href="../_images/wh_correlated_k.png"><img alt="../_images/wh_correlated_k.png" src="../_images/wh_correlated_k.png" style="width: 85%;" /></a>
+</figure>
+</section>
+<section id="id2">
+<h4><span class="section-number">1.5.4. </span>Summary<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>The relationship between the emissivity and the greenhouse gas concentration is well-understood both theoretically and experimentally</p></li>
+<li><p>The volume scattering coefficent, and therefore the optical depth, is a function of gas concentration and absorption line strength,
+which in turn depends on wavelength, temperature, and atmospheric pressure.</p></li>
+<li><p>Getting accurate heating and cooling rates in climate models is non-trivial, but essentially a solved problem.</p></li>
+</ul>
+</section>
+</section>
+<section id="the-schwarzchild-equation-for-radiance">
+<h3><span class="section-number">1.6. </span>The Schwarzchild equation for radiance<a class="headerlink" href="#the-schwarzchild-equation-for-radiance" title="Permalink to this headline">#</a></h3>
+<p>Using <a class="reference internal" href="#equation-eq-diff-tau">(1.11)</a> we can add an emission term to <a class="reference internal" href="#equation-diffbeer">(1.7)</a> to get the Schwarzchild equation for vertical radiance:</p>
+<div class="math notranslate nohighlight">
+\[
+dL = -L\,d\tau + B\,d\tau
+\]</div>
+<p>Choose a coordinate system where <span class="math notranslate nohighlight">\(\tau\)</span> is zero at the top of the atmosphere increasing to downwards:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau = \int_z^\infty \rho_{gas} k_\lambda dz
+\]</div>
+<p>Use an integrating factor:</p>
+<div class="math notranslate nohighlight" id="equation-integ1">
+<span class="eqno">(1.16)<a class="headerlink" href="#equation-integ1" title="Permalink to this equation">#</a></span>\[
+\exp(\tau) dL +
+L \exp(\tau)\,d\tau=\exp(\tau)B_\lambda(T) \,d\tau
+\]</div>
+<p>Impose boundary conditions and integrate from the top of the atmoshere down to optical depth <span class="math notranslate nohighlight">\(\tau_{\lambda T}\)</span> to get the upward radiance at the top of the atmosphere, where <span class="math notranslate nohighlight">\(\tau = 0\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-calc2">
+<span class="eqno">(1.17)<a class="headerlink" href="#equation-eq-calc2" title="Permalink to this equation">#</a></span>\[
+    L(0)= B_\lambda(T_{sfc}) \exp(-\tau_{\lambda T}) +    \int_0^{\tau_{\lambda T}} \exp\left(-\tau^\prime \right )
+    B_\lambda(T)\, d\tau^\prime
+\]</div>
+<p>Since the transmission is defined as <span class="math notranslate nohighlight">\(t_r = \exp(-\tau)\)</span>, we can change variables and write:</p>
+<div class="math notranslate nohighlight" id="equation-eq-schwarz-tr">
+<span class="eqno">(1.18)<a class="headerlink" href="#equation-eq-schwarz-tr" title="Permalink to this equation">#</a></span>\[
+ L(0) =  B_\lambda(T_{sfc})t_{rtot} +    \int_{t_{rtot}}^{1} B_\lambda(T)\, dt_r^\prime 
+\]</div>
+<section id="sample-problem">
+<h4><span class="section-number">1.6.1. </span>Sample problem<a class="headerlink" href="#sample-problem" title="Permalink to this headline">#</a></h4>
+<p>Use the mean value theorem to show that there is an average temperature <span class="math notranslate nohighlight">\(\hat{T}\)</span> that allows us to write <a class="reference internal" href="#equation-eq-schwarz-tr">(1.18)</a> in the form:</p>
+<div class="math notranslate nohighlight">
+\[
+L(0) = B_\lambda(T_{sfc})t_{rtot} + (1 - t_{rtot})B_\lambda(\hat{T})
+\]</div>
+<p>and that this corresponds to the situation depicted in <a class="reference internal" href="#fig-single-layer"><span class="std std-numref">Fig. 1.6</span></a>.</p>
+</section>
+<section id="id3">
+<h4><span class="section-number">1.6.2. </span>Summary<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>The Schwarzchild equation is a first-order ode that predicts the radiance along a path as a function of gas temperature and gas absorption</p></li>
+<li><p>To be usefull in climate model calculations, a model has to integrate a solution along the absorber path, over all wavelengths and over a hemisphere to get the radiative flux passing through a model layer</p></li>
+</ul>
+</section>
+</section>
+<section id="weighting-functions">
+<span id="sec-weights"></span><h3><span class="section-number">1.7. </span>Weighting functions<a class="headerlink" href="#weighting-functions" title="Permalink to this headline">#</a></h3>
+<p>We can get some more insight into how absorption and transmission work by rewriting <a class="reference internal" href="#equation-eq-schwarz-tr">(1.18)</a> as folows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+ L(0) &amp;=  B_\lambda(T_{sfc})t_{rtot} +    \int_{t_{rtot}}^{1} B_\lambda(T)\, dt_r^\prime \\
+   &amp;=  B_\lambda(T_{sfc}) t_{rtot} +    \int_0^{z_{top}}
+    B_\lambda(T)\, \frac{dt_r}{dz^\prime} dz^\prime
+\end{align}
+\end{split}\]</div>
+<p>The derivative <span class="math notranslate nohighlight">\(dt_r/dz\)</span> is called the <strong>weighting function</strong> and determines the relative contribution
+of the thermal emission of each layer to the upwelling radiance leaving the atmosphere.</p>
+<p>For a “well-mixed” absorber like <span class="math notranslate nohighlight">\(CO_2\)</span>, in which
+the absorber mass fraction is constant with height, the
+absorber density has an exponential profile:</p>
+<div class="math notranslate nohighlight">
+\[
+\rho_{gas}(z) = \rho_0 \exp(-z/H)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(H\)</span> is the <em>scale height</em> for the absorber.</p>
+<p>Integrating the optical depth for that case gives:</p>
+<div class="math notranslate nohighlight" id="equation-eq-tauz">
+<span class="eqno">(1.19)<a class="headerlink" href="#equation-eq-tauz" title="Permalink to this equation">#</a></span>\[
+\tau(z) = \int_z^\infty \rho_{gas} k_\lambda dz^\prime = H k_\lambda \rho_0 \exp(-z/H)
+\]</div>
+<section id="id4">
+<h4><span class="section-number">1.7.1. </span>Sample problem<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
+<p>Insert <a class="reference internal" href="#equation-eq-tauz">(1.19)</a> into <a class="reference internal" href="#equation-eq-trans">(1.8)</a> and differentiate twice to show that the maximum values
+of the weighting function <span class="math notranslate nohighlight">\(dt_r/dz\)</span> occurs at <span class="math notranslate nohighlight">\(\tau = 1\)</span></p>
+</section>
+<section id="figure-examples">
+<h4><span class="section-number">1.7.2. </span>Figure examples<a class="headerlink" href="#figure-examples" title="Permalink to this headline">#</a></h4>
+<p><a class="reference internal" href="#fig-tau-max"><span class="std std-numref">Fig. 1.10</span></a> below shows a weighting function <span class="math notranslate nohighlight">\(dt_r/dz\)</span> (short-dashed line)for this case.</p>
+<figure class="align-default" id="fig-tau-max">
+<a class="reference internal image-reference" href="../_images/wh_unit_tau.png"><img alt="../_images/wh_unit_tau.png" src="../_images/wh_unit_tau.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.10 </span><span class="caption-text">Vertical transmissivity (<span class="math notranslate nohighlight">\(I_\lambda\)</span> in this book’s notation) as a function of height.</span><a class="headerlink" href="#fig-tau-max" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p><a class="reference internal" href="#fig-sounder"><span class="std std-numref">Fig. 1.11</span></a> below shows the actual weighting functions and transmissivty profiles for
+a satellite radiometer that measures the vertical temperature profile using the 15 <span class="math notranslate nohighlight">\(\mu m\)</span> <span class="math notranslate nohighlight">\(CO_2\)</span> band. Channels 1, 2, and 3 are measuring photons predominantly emiited from the
+stratosphere, while channels 4, 5 and 6 are measuring tropospheric emission.</p>
+<figure class="align-default" id="fig-sounder">
+<a class="reference internal image-reference" href="../_images/weighting_funs_wh.png"><img alt="../_images/weighting_funs_wh.png" src="../_images/weighting_funs_wh.png" style="width: 55%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.11 </span><span class="caption-text"><span class="math notranslate nohighlight">\(CO_2\)</span> weighting functions and transmissivity for a satellite sounder</span><a class="headerlink" href="#fig-sounder" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Note that this is how the temperature retrievals were made in <a class="reference internal" href="#fig-strat-cooling"><span class="std std-numref">Fig. 1.2</span></a></p>
+</section>
+<section id="id5">
+<h4><span class="section-number">1.7.3. </span>Summary<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>The weighting function selects the portion of the atmosphere that contributes most to outgoing emitted radiation to space.</p></li>
+<li><p>As the optical depth increases at a particular wavelength (because of increased <span class="math notranslate nohighlight">\(CO_2\)</span> concentration), the altitude of maximum emission
+increases.</p></li>
+<li><p>In the troposphere, the temperature decreases with altitude, so emission at that wavelength will decrease, increasing the greenhouse effect.</p></li>
+</ul>
+</section>
+</section>
+<section id="the-schwarzchild-equation-for-flux">
+<h3><span class="section-number">1.8. </span>The Schwarzchild equation for flux<a class="headerlink" href="#the-schwarzchild-equation-for-flux" title="Permalink to this headline">#</a></h3>
+<p>So far we’ve restricted ourselves to a single vertical direction, and calculated the radiance along the vertical slant path <span class="math notranslate nohighlight">\(s=z\)</span>.  If we want to
+integrate over a hemisphere to get the flux, we’re going to need to
+sample all angles, which means all slant paths <span class="math notranslate nohighlight">\(s = z/\cos \theta = z/\mu\)</span></p>
+<figure class="align-default" id="fig-diffuse">
+<a class="reference internal image-reference" href="../_images/diffuse_flux.png"><img alt="../_images/diffuse_flux.png" src="../_images/diffuse_flux.png" style="width: 45%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.12 </span><span class="caption-text">Slant paths for thermal emission</span><a class="headerlink" href="#fig-diffuse" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="slant-path-transmissivity">
+<h4><span class="section-number">1.8.1. </span>Slant path transmissivity<a class="headerlink" href="#slant-path-transmissivity" title="Permalink to this headline">#</a></h4>
+<p>The slant path version of <a class="reference internal" href="#equation-eq-calc2">(1.17)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-calc-slant">
+<span class="eqno">(1.20)<a class="headerlink" href="#equation-eq-calc-slant" title="Permalink to this equation">#</a></span>\[
+    L(0,\mu)= B_\lambda(T_{sfc}) \exp(-\tau_{\lambda T}/\mu) +    \int_0^{\tau_{\lambda T}} \exp\left(-\tau^\prime /\mu\right )
+    B_\lambda(T)\, \frac{d\tau^\prime}{\mu}
+\]</div>
+<p>Assume azimuthal isotropy so we can integrate out <span class="math notranslate nohighlight">\(\int_0^{2\pi} d\phi = 2\pi\)</span>.  Then we’re left with:</p>
+<div class="math notranslate nohighlight" id="equation-eq-prediffuse">
+<span class="eqno">(1.21)<a class="headerlink" href="#equation-eq-prediffuse" title="Permalink to this equation">#</a></span>\[\begin{split}
+\begin{align}
+E(0) &amp;= 2\pi \int_0^1 \mu L(0,\mu) d\mu \\
+     &amp; 2 \pi \int_0^1 \mu B_\lambda(T_{sfc}) \exp(-\tau_{\lambda T}/\mu) d\mu 
+        + 2  \pi \int_0^1  \int_0^{\tau_{\lambda T}} \mu \exp\left(-\tau^\prime /\mu\right )
+    B_\lambda(T)\, \frac{d\tau^\prime}{\mu} d\mu
+\end{align}
+\end{split}\]</div>
+<p>The Planck function is isotropic so can be taken out of the <span class="math notranslate nohighlight">\(\mu\)</span> integral, so define the <strong>flux transmission</strong>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-fluxtran">
+<span class="eqno">(1.22)<a class="headerlink" href="#equation-eq-fluxtran" title="Permalink to this equation">#</a></span>\[
+ \hat{t}_f =  2 \int_0^1 \mu \exp \left (- \frac{\tau }{\mu} \right ) d\mu
+\]</div>
+<p>Make the change of variables <span class="math notranslate nohighlight">\(u = \mu^{-1}\)</span> to get the <strong>third exponential integral</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+ \hat{t}_f = 2 \int_1^\infty \frac{\exp(-u \tau)}{u^3} du = 2E_i(\tau)
+ \]</div>
+<p>which is available from scipy as <code class="docutils literal notranslate"><span class="pre">expn(3.0,</span> <span class="pre">tau)</span></code>.  Luckily, to a pretty good approximation
+we can fake the integration by just multiplying the optical depth by 5/3.  This is called
+the <strong>diffusivity approximation</strong></p>
+<div class="math notranslate nohighlight" id="equation-eq-diffapprox">
+<span class="eqno">(1.23)<a class="headerlink" href="#equation-eq-diffapprox" title="Permalink to this equation">#</a></span>\[
+ \hat{t}_f = 2 \int_1^\infty \frac{\exp(-u \tau)}{u^3} du = 2E_i(\tau) = \exp(-1.66 \tau)
+\]</div>
+<p>The python code below compares <span class="math notranslate nohighlight">\(\exp(-1.66 \tau\)</span> with <span class="math notranslate nohighlight">\(2E_i(\tau)\)</span>.  The approximation is very good for <span class="math notranslate nohighlight">\(\tau &lt; 1\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.special</span> <span class="kn">import</span> <span class="n">expn</span>
+<span class="n">tau</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">flux_trans</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">expn</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">tau</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tau</span><span class="p">,</span> <span class="n">flux_trans</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;scipy 2Ei(3)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tau</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">1.66</span> <span class="o">*</span> <span class="n">tau</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;-5/3 approx&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;flux_trans&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;vertical optical depth $\tau$&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/838596a256d1a47b61047130073632d848d1e7221acf480b20a7a626e0f8c941.png" src="../_images/838596a256d1a47b61047130073632d848d1e7221acf480b20a7a626e0f8c941.png" />
+</div>
+</div>
+</section>
+<section id="the-schwarzchild-equation-under-the-diffusivity-approximation">
+<h4><span class="section-number">1.8.2. </span>The Schwarzchild equation under the diffusivity approximation<a class="headerlink" href="#the-schwarzchild-equation-under-the-diffusivity-approximation" title="Permalink to this headline">#</a></h4>
+<p>Using the diffusivity approximation, <a class="reference internal" href="#equation-eq-prediffuse">(1.21)</a> can be rewritten as:</p>
+<div class="math notranslate nohighlight" id="equation-eq-postdiffuse">
+<span class="eqno">(1.24)<a class="headerlink" href="#equation-eq-postdiffuse" title="Permalink to this equation">#</a></span>\[
+\begin{align}
+E(0) = \underbrace{\pi B_\lambda(T_{sfc}) \hat{t}_{ftot}}_{\text{transmission}} + 
+ \underbrace{\pi \int_{\hat{t}_{ftot}}^1  B_\lambda(T) d\hat{t}_f}_{emission}
+\end{align}
+\]</div>
+<p>which is a close parallel to the radiance equation <a class="reference internal" href="#equation-eq-schwarz-tr">(1.18)</a>.</p>
+</section>
+<section id="id6">
+<h4><span class="section-number">1.8.3. </span>Summary<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>Thanks to the diffusivity approximation it is relatively easy to account for the impact of slant paths on radiation transport
+between vertical levels</p></li>
+</ul>
+</section>
+</section>
+<section id="tropospheric-warming-and-stratospheric-cooling">
+<h3><span class="section-number">1.9. </span>Tropospheric warming and stratospheric cooling<a class="headerlink" href="#tropospheric-warming-and-stratospheric-cooling" title="Permalink to this headline">#</a></h3>
+<p>Recall from <a class="reference internal" href="#fig-strat-cooling"><span class="std std-numref">Fig. 1.2</span></a> that we are seeing warming in the troposphere and cooling in the  stratosphere</p>
+<p>To get the greenhouse effect from <a class="reference internal" href="#equation-eq-postdiffuse">(1.24)</a>, we  need to subtract the surface flux:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+GH_\lambda &amp;= \pi B_\lambda(T_{sfc}) - E(0) = \pi B_\lambda(T_{sfc}) ( 1 - \hat{t}_{ftot} ) - \pi \int_{\hat{t}_{ftot}}^1  B_\lambda(T) d\hat{t}_f\\
+&amp;= \pi B_\lambda(T_{sfc}) ( 1 - \hat{t}_{ftot} ) - \pi B_\lambda(\hat{T})(1 - \hat{t}_{ftot})
+\end{align}
+\end{split}\]</div>
+<p>To see why increasing greenhouse gasses cools the statosphere, note that in the stratosphere, <span class="math notranslate nohighlight">\(B_\lambda(T_{sfc}) &lt; B_\lambda(\hat{T})\)</span>.
+As <span class="math notranslate nohighlight">\(CO_2\)</span> concentration increases, the flux transmissivity <span class="math notranslate nohighlight">\(\hat{t}_{ftot}\)</span> decreases.  With the temperature increasing with
+height, the result will be a net negative change in the greenhouse effect.</p>
+</section>
+<section id="conclusions">
+<h3><span class="section-number">1.10. </span>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">#</a></h3>
+<section id="greenhouse-physics">
+<h4><span class="section-number">1.10.1. </span>Greenhouse physics<a class="headerlink" href="#greenhouse-physics" title="Permalink to this headline">#</a></h4>
+<ol class="arabic simple">
+<li><p>Greenhouse gases selectively absorb and emit longwave photons in discrete bands.</p></li>
+<li><p>The earth cools by emission of longwave photons to space.</p></li>
+<li><p>The height at which this emission occurs depends on the photon wavelength and the molecular structure and concentration of the greenhouse gas.
+It is set by the atmospheric level at which
+the optical depth <span class="math notranslate nohighlight">\(\tau = 1\)</span>.  This level is high in the atmosphere for strong absorbing bands, and lower in the atmosphere for weaker bands.</p></li>
+<li><p>The gas temperature decreases with height in the toposphere (because thermal energy is used to lift the atmosphere above the surface)</p></li>
+<li><p>The gas temperature increases with height in the stratosphere (because ozone absorbs hard ultraviolet radiation)</p></li>
+<li><p>We are increasing the greenhouse gas concentration, and therefore  moving the emission altitude higher for all absorption bands</p></li>
+<li><p>In the troposphere, this produces reduced emission to space from colder temperatures, heating the atmosphere</p></li>
+<li><p>In the startosphere, this produces increased emission to space, cooling the stratosphere.</p></li>
+</ol>
+</section>
+<section id="math-concepts">
+<h4><span class="section-number">1.10.2. </span>Math concepts<a class="headerlink" href="#math-concepts" title="Permalink to this headline">#</a></h4>
+<ol class="arabic">
+<li><p>Integrals and derivatives – e.g. <a class="reference internal" href="#equation-eq-tauz">(1.19)</a>, <a class="reference internal" href="#sec-weights"><span class="std std-numref">Section 1.7</span></a></p></li>
+<li><p>Spherical coordinates, solid angle:  <a class="reference internal" href="#equation-domegab">(1.6)</a></p></li>
+<li><p>Working with differentials/Taylor series – e.g.:</p>
+<div class="math notranslate nohighlight">
+\[dt_r = d\exp(-\tau) = -\exp(-\tau)\,d\tau \approx -d\tau\]</div>
+</li>
+<li><p>Change of variables – e.g.: <a class="reference internal" href="#equation-planck-wn">(1.3)</a></p></li>
+<li><p>ODEs/integrating factors  – e.g. <a class="reference internal" href="#equation-eq-calc2">(1.17)</a></p></li>
+</ol>
+</section>
+</section>
+</section>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Philip Austin
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
