@@ -21,6 +21,12 @@ toc-showmarkdowntxt: false
 
 * Presentation by Phil Austin, 2023/May/31
 
+    * Web version: [https://phaustin.github.io/climatemath/docs/greenhouse.html](https://phaustin.github.io/climatemath/docs/greenhouse.html)
+    
+    * Repository:  [https://github.com/phaustin/climatemath](https://github.com/phaustin/climatemath)
+    
+
+
 ## Big picture
 
 The greenhouse effect is the change in longwave radiation escaping to space due to the presence of an atmosphere.
@@ -350,7 +356,7 @@ So the volume absorption coefficient is the inverse of the average distance a ph
 
 "Good absorbers are good emitters"
 
-As the transmissivty plots in {ref}`wh_trans` indicate, greenhouse gasses are extremely selective absorbers.
+As the transmissivty plots in {numref}`wh_trans` indicate, greenhouse gasses are extremely selective absorbers.
 An important result from statistical mechanics:  any gas in local thermodynamic equilibrium at temperature T that is absorbing radiation at wavelength $\lambda$ will be emitting radiance 
 
 $$
@@ -359,7 +365,7 @@ $$
  
 Where $\epsilon_\lambda$ is the **monochromatic emissivity** (unitless).  
 
-{ref}`kirchoff` below shows why $\epsilon_\lambda = a_\lambda$ in a collision dominated system.  Since the plates are horizontally infinite, the gas is absorbing flux $2 a_\lambda \pi B(\lambda, 300)$ from the black plates, and
+{numref}`kirchoff` below shows why $\epsilon_\lambda = a_\lambda$ in a collision dominated system.  Since the plates are horizontally infinite, the gas is absorbing flux $2 a_\lambda \pi B(\lambda, 300)$ from the black plates, and
 emitting $2 \epsilon_\lambda \pi B(\lambda, 300)$ back to the plates.  If $a_\lambda \neq \epsilon_\lambda$, the temperature of the gas would
 change, violating the 2nd law of thermodynamics.
 
@@ -402,7 +408,7 @@ $$ (eq:diff_tau)
 (singlelayer)=
 ## A single-layer model of the greenhouse effect
 
-{ref}`fig:single_layer` below shows how $\epsilon$ is related to the upward and downward fluxes in an atmosphere overlying a black absorbing surface.  Note that due to Kirchoff's law, $\epsilon$ is representing both the emissivity and the absorptivity/transmissivity of the layer.
+{numref}`fig:single_layer` below shows how $\epsilon$ is related to the upward and downward fluxes in an atmosphere overlying a black absorbing surface.  Note that due to Kirchoff's law, $\epsilon$ is representing both the emissivity and the absorptivity/transmissivity of the layer.
 
 ```{figure} figures/single_layer.png
 ---
@@ -469,7 +475,7 @@ print(f"{Tg=:.0f} K, {Ta=:.0f} K")
 
 ### Thin layer limit: The skin temperature is independent of $\epsilon$
 
-If we change the interpretation of the flux G in {ref}`fig:single_layer` to be the total upward flux from the surface
+If we change the interpretation of the flux G in {numref}`fig:single_layer` to be the total upward flux from the surface
 and lower atmosphere, then we can find the
 "skin temperature" at the top of the atmosphere by taking the thin layer limit $\epsilon \rightarrow 0$ in {eq}`eq:thinlim` and get
 
@@ -500,7 +506,7 @@ print(f"{Tskin=:.0f} K")
 
 ## Calculating the wavelength-dependent emissivity of a greenhouse gas
 
-In {ref}`singlelayer` we found a wavelength-averaged $\epsilon$ consistent with current $S$ and surface temperature. 
+In {numref}`singlelayer` we found a wavelength-averaged $\epsilon$ consistent with current $S$ and surface temperature. 
 To move further, we need to link $\epsilon_\lambda$ to the volume absorption coefficient $\sigma_\lambda$
 for the greenhouse gas. To do this
 first decompose $\sigma_\lambda$ into two components:  The **absorber gas density** $\rho_{gas}\ (kg\,m^{-3})$, and the **mass absorption coefficient** $k_\lambda\ (m^{2}\,kg^{-1})$
@@ -576,13 +582,13 @@ width: 85%
 
 ## The Schwarzchild equation for radiance
 
-Using {eq}`eq:diff_tau` we can add an emission term to {eq}`diffbeer` to get the Schwarzchild equation for vertical radiance:
+gUsing {eq}`eq:diff_tau` we can add an emission term to {eq}`diffbeer` to get the Schwarzchild equation for vertical radiance:
 
 $$
 dL = -L\,d\tau + B\,d\tau
 $$
 
-Choose a coordinate system where $\tau$ is zero at the top of the atmosphere increasing to downwards:
+Choose a coordinate system where $\tau$ is zero at the top of the atmosphere increasing downwards:
 
 $$
 \tau = \int_z^\infty \rho_{gas} k_\lambda dz
@@ -620,7 +626,7 @@ Use the mean value theorem to show that there is an average temperature $\hat{T}
 $$
 L(0) = B_\lambda(T_{sfc})t_{rtot} + (1 - t_{rtot})B_\lambda(\hat{T})
 $$
-and that this corresponds to the situation depicted in {ref}`fig:single_layer`.
+and that this corresponds to the situation depicted in {numref}`fig:single_layer`.
 
 +++ {"user_expressions": []}
 
@@ -664,7 +670,7 @@ where $H$ is the *scale height* for the absorber.
 Integrating the optical depth for that case gives:
 
 $$
-\tau(z) = \int_z^\infty \rho_{gas} k_\lambda dz^\prime = H k_\lambda \rho_0 \exp(-z/H)
+\tau(z) = \int_{z}^{\infty} \rho_{gas} k_\lambda dz^\prime = H k_\lambda \rho_0 \exp(-z/H)
 $$ (eq:tauz)
 
 ### Sample problem
@@ -675,7 +681,7 @@ of the weighting function $dt_r/dz$ occurs at $\tau = 1$
 ### Figure examples
 
 
-{ref}`fig:tau_max` below shows a weighting function $dt_r/dz$ (short-dashed line)for this case.
+{numref}`fig:tau_max` below shows a weighting function $dt_r/dz$ (short-dashed line)for this case.
 
 +++ {"user_expressions": []}
 
@@ -690,8 +696,9 @@ Vertical transmissivity ($I_\lambda$ in this book's notation) as a function of h
 
 +++ {"user_expressions": []}
 
-{ref}`fig:sounder` below shows the actual weighting functions and transmissivty profiles for
-a satellite radiometer that measures the vertical temperature profile using the 15 $\mu m$ $CO_2$ band.
+{numref}`fig:sounder` below shows the actual weighting functions and transmissivty profiles for
+a satellite radiometer that measures the vertical temperature profile using the 15 $\mu m$ $CO_2$ band. Channels 1, 2, and 3 are measuring photons predominantly emiited from the
+stratosphere, while channels 4, 5 and 6 are measuring tropospheric emission.
 
 ```{figure} figures/weighting_funs_wh.png
 ---
@@ -704,7 +711,7 @@ $CO_2$ weighting functions and transmissivity for a satellite sounder
 
 +++ {"user_expressions": []}
 
-Note that this is how the temperature retrievals were made in {ref}`fig:strat_cooling`
+Note that this is how the temperature retrievals were made in {numref}`fig:strat_cooling`
 
 +++ {"user_expressions": []}
 
@@ -817,7 +824,7 @@ between vertical levels
 
 ## Tropospheric warming and stratospheric cooling
 
-Recall from {ref}`fig:strat_cooling` that we are seeing warming in the troposphere and cooling in the  stratosphere 
+Recall from {numref}`fig:strat_cooling` that we are seeing warming in the troposphere and cooling in the  stratosphere 
 
 To get the greenhouse effect from {eq}`eq:postdiffuse`, we  need to subtract the surface flux:
 
@@ -844,7 +851,8 @@ height, the result will be a net negative change in the greenhouse effect.
 
 2) The earth cools by emission of longwave photons to space.
 
-3) The height at which this emission occurs depends on both photon wavelength and the greenhouse gas, and is set by the atmospheric level at which
+3) The height at which this emission occurs depends on the photon wavelength and the molecular structure and concentration of the greenhouse gas.
+   It is set by the atmospheric level at which
    the optical depth $\tau = 1$.  This level is high in the atmosphere for strong absorbing bands, and lower in the atmosphere for weaker bands.
    
 4) The gas temperature decreases with height in the toposphere (because thermal energy is used to lift the atmosphere above the surface)
@@ -859,7 +867,7 @@ height, the result will be a net negative change in the greenhouse effect.
 
 ### Math concepts
 
-1. Integrals and derivatives -- e.g. {eq}`eq:tauz`, {ref}`sec:weights`
+1. Integrals and derivatives -- e.g. {eq}`eq:tauz`, {numref}`sec:weights`
 
 1. Spherical coordinates, solid angle:  {eq}`domegaB`
 

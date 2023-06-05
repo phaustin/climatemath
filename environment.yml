@@ -1,0 +1,21 @@
+name: notebook
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - matplotlib
+  - scipy
+  - jupyterlab
+  - jupytext
+  - jupyter-book
+  - git
+  - jupyterlab-myst
+  - pandas
+  - ghp-import
+  
+  
+  
+  
+  
