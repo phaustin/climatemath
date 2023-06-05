@@ -372,7 +372,12 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="understanding-the-greenhouse-effect">
 <h1><span class="section-number">1. </span>Understanding the greenhouse effect<a class="headerlink" href="#understanding-the-greenhouse-effect" title="Permalink to this headline">#</a></h1>
 <ul class="simple">
-<li><p>Presentation by Phil Austin, 2023/May/31</p></li>
+<li><p>Presentation by Phil Austin, 2023/May/31</p>
+<ul>
+<li><p>Web version: <a class="reference external" href="https://phaustin.github.io/climatemath/docs/greenhouse.html">https://phaustin.github.io/climatemath/docs/greenhouse.html</a></p></li>
+<li><p>Repository:  <a class="github reference external" href="https://github.com/phaustin/climatemath">phaustin/climatemath</a></p></li>
+</ul>
+</li>
 </ul>
 <section id="big-picture">
 <h2><span class="section-number">1.1. </span>Big picture<a class="headerlink" href="#big-picture" title="Permalink to this headline">#</a></h2>
@@ -822,12 +827,12 @@ which in turn depends on wavelength, temperature, and atmospheric pressure.</p><
 </section>
 <section id="the-schwarzchild-equation-for-radiance">
 <h2><span class="section-number">1.6. </span>The Schwarzchild equation for radiance<a class="headerlink" href="#the-schwarzchild-equation-for-radiance" title="Permalink to this headline">#</a></h2>
-<p>Using <a class="reference internal" href="#equation-eq-diff-tau">(1.11)</a> we can add an emission term to <a class="reference internal" href="#equation-diffbeer">(1.7)</a> to get the Schwarzchild equation for vertical radiance:</p>
+<p>gUsing <a class="reference internal" href="#equation-eq-diff-tau">(1.11)</a> we can add an emission term to <a class="reference internal" href="#equation-diffbeer">(1.7)</a> to get the Schwarzchild equation for vertical radiance:</p>
 <div class="math notranslate nohighlight">
 \[
 dL = -L\,d\tau + B\,d\tau
 \]</div>
-<p>Choose a coordinate system where <span class="math notranslate nohighlight">\(\tau\)</span> is zero at the top of the atmosphere increasing to downwards:</p>
+<p>Choose a coordinate system where <span class="math notranslate nohighlight">\(\tau\)</span> is zero at the top of the atmosphere increasing downwards:</p>
 <div class="math notranslate nohighlight">
 \[
 \tau = \int_z^\infty \rho_{gas} k_\lambda dz
@@ -890,7 +895,7 @@ absorber density has an exponential profile:</p>
 <p>Integrating the optical depth for that case gives:</p>
 <div class="math notranslate nohighlight" id="equation-eq-tauz">
 <span class="eqno">(1.19)<a class="headerlink" href="#equation-eq-tauz" title="Permalink to this equation">#</a></span>\[
-\tau(z) = \int_z^\infty \rho_{gas} k_\lambda dz^\prime = H k_\lambda \rho_0 \exp(-z/H)
+\tau(z) = \int_{z}^{\infty} \rho_{gas} k_\lambda dz^\prime = H k_\lambda \rho_0 \exp(-z/H)
 \]</div>
 <section id="id4">
 <h3><span class="section-number">1.7.1. </span>Sample problem<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>

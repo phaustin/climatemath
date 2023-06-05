@@ -21,6 +21,12 @@ toc-showmarkdowntxt: false
 
 * Presentation by Phil Austin, 2023/May/31
 
+    * Web version: [https://phaustin.github.io/climatemath/docs/greenhouse.html](https://phaustin.github.io/climatemath/docs/greenhouse.html)
+    
+    * Repository:  [https://github.com/phaustin/climatemath](https://github.com/phaustin/climatemath)
+    
+
+
 ## Big picture
 
 The greenhouse effect is the change in longwave radiation escaping to space due to the presence of an atmosphere.
@@ -576,13 +582,13 @@ width: 85%
 
 ## The Schwarzchild equation for radiance
 
-Using {eq}`eq:diff_tau` we can add an emission term to {eq}`diffbeer` to get the Schwarzchild equation for vertical radiance:
+gUsing {eq}`eq:diff_tau` we can add an emission term to {eq}`diffbeer` to get the Schwarzchild equation for vertical radiance:
 
 $$
 dL = -L\,d\tau + B\,d\tau
 $$
 
-Choose a coordinate system where $\tau$ is zero at the top of the atmosphere increasing to downwards:
+Choose a coordinate system where $\tau$ is zero at the top of the atmosphere increasing downwards:
 
 $$
 \tau = \int_z^\infty \rho_{gas} k_\lambda dz
@@ -664,7 +670,7 @@ where $H$ is the *scale height* for the absorber.
 Integrating the optical depth for that case gives:
 
 $$
-\tau(z) = \int_z^\infty \rho_{gas} k_\lambda dz^\prime = H k_\lambda \rho_0 \exp(-z/H)
+\tau(z) = \int_{z}^{\infty} \rho_{gas} k_\lambda dz^\prime = H k_\lambda \rho_0 \exp(-z/H)
 $$ (eq:tauz)
 
 ### Sample problem
