@@ -1,4 +1,4 @@
-v---
+---
 jupytext:
   formats: ipynb,md:myst
   text_representation:
@@ -277,7 +277,7 @@ $$
 a = \frac{dL}{L}
 $$
 
-{ref}`beers_layer` illustrates the two quantities we need to quantify the absorptivity: $ds$ (m) is the **slant path** and $\sigma$ ($m^2\,m^{-3}$) is the **volume absorption coefficient**.
+{numref}`beers_layer` illustrates the two quantities we need to quantify the absorptivity: $ds$ (m) is the **slant path** and $\sigma$ ($m^2\,m^{-3}$) is the **volume absorption coefficient**.
 
 
 ```{figure} figures/beers_layer.png
