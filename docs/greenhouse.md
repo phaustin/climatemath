@@ -55,8 +55,8 @@ Estimated energy fluxes, current climate
 
 * The atmosphere absorbs and emits longwave radiation.
 
-* Increasing greenhouse gas concentration increases the emissivity of the atmosphere
-  (note the contradiction with [Homework 1](https://www.dropbox.com/s/1ym7dnxtehvy5fq/ANS_05_19_Draft_SCIE001_EBM_HW.pdf?dl=0) ).  There is
+* Increasing greenhouse gas concentration increases the emissivity of the atmosphere.
+  There is
   an important distinction between **emission** (net emitted flux in $W\,m^{-2}$) and **emissivity**
   (unitless, the relative ability of a gas molecule to emit a photon compared to a blackbody)
 
